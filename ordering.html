@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Order — Jing Cheng Trading Inc</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@800&display=swap');
+  :root { --accent: #1B6CA8; --accent-dark: #144F7C; --accent-light: #E8F2FB; --black: #111318; --ink: #2C2F36; --muted: #6B7280; --rule: #E5E7EB; --surface: #F9FAFB; --white: #FFFFFF; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; }
+  .nav-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--black); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-logo .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links a.active { color: var(--black); font-weight: 600; }
+  .nav-phone { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; border: 1.5px solid var(--accent); padding: 8px 18px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+  .nav-phone:hover { background: var(--accent); color: #fff; }
+  .page-hero { background: var(--black); padding: 72px 48px; }
+  .page-hero-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px; }
+  .page-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(34px, 3.8vw, 58px); font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 16px; }
+  .page-hero p { font-size: 17px; color: rgba(255,255,255,0.55); max-width: 520px; }
+  .ordering-body { display: grid; grid-template-columns: 2fr 1fr; gap: 64px; padding: 72px 48px; align-items: start; }
+  .ordering-main h2 { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; color: var(--black); letter-spacing: -0.04em; margin-bottom: 8px; }
+  .ordering-main .intro { font-size: 16px; color: var(--muted); margin-bottom: 48px; max-width: 520px; line-height: 1.7; }
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 32px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+  .step:last-child { border-bottom: none; }
+  .step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff; font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-title { font-family: 'Syne', sans-serif; font-size: 19px; font-weight: 800; color: var(--black); margin-bottom: 8px; letter-spacing: -0.03em; }
+  .step-body { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .step-body a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .step-body a:hover { text-decoration: underline; }
+  .step-note { margin-top: 12px; background: var(--accent-light); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 13px; color: var(--accent-dark); }
+  .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+  .sidebar-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 24px; }
+  .sidebar-card h3 { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 16px; letter-spacing: -0.01em; }
+  .contact-btn { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 8px; text-decoration: none; margin-bottom: 10px; transition: opacity 0.15s; }
+  .contact-btn:last-child { margin-bottom: 0; }
+  .contact-btn:hover { opacity: 0.88; }
+  .contact-btn.phone { background: var(--accent); color: #fff; }
+  .contact-btn.email { background: var(--black); color: #fff; }
+  .contact-btn.whatsapp { background: #25D366; color: #fff; }
+  .contact-btn-icon { font-size: 20px; flex-shrink: 0; }
+  .contact-btn-text { font-size: 14px; font-weight: 600; line-height: 1.3; }
+  .contact-btn-sub { font-size: 12px; opacity: 0.75; }
+  .faq { border-top: 1px solid var(--rule); }
+  .faq-item { border-bottom: 1px solid var(--rule); }
+  .faq-q { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; color: var(--black); padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-q::after { content: '+'; font-size: 22px; font-weight: 400; color: var(--muted); transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; padding-bottom: 20px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .delivery-map { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 28px; }
+  .delivery-map h2 { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--black); margin-bottom: 8px; letter-spacing: -0.03em; }
+  .delivery-map p { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+  .delivery-zones { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .zone { border-radius: 8px; padding: 14px 16px; }
+  .zone.primary { background: var(--accent); color: #fff; }
+  .zone.secondary { background: var(--accent-light); color: var(--accent-dark); }
+  .zone-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 4px; }
+  .zone-name { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; }
+  .zone-note { font-size: 12px; opacity: 0.75; margin-top: 2px; }
+  .faq-section { padding: 0 48px 80px; }
+  .faq-section h2 { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; color: var(--black); margin-bottom: 32px; letter-spacing: -0.04em; }
+  footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 40px 48px 24px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; }
+  .float-btn { position: fixed; bottom: 28px; right: 28px; z-index: 200; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: transform 0.2s; }
+  .float-btn:hover { transform: scale(1.1); }
+  @media (max-width: 900px) {
+    .ordering-body { grid-template-columns: 1fr; gap: 40px; }
+    .sidebar { position: static; }
+    .delivery-zones { grid-template-columns: 1fr; }
+    nav { padding: 0 20px; } .nav-links { display: none; }
+    .page-hero { padding: 56px 24px; }
+    .ordering-body { padding: 48px 24px; }
+    .faq-section { padding: 0 24px 56px; }
+    footer { padding: 32px 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jing Cheng Trading<span class="dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="order.html">Place Order</a></li>
+    <li><a href="ordering.html" class="active">How to Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:+13476366182" class="nav-phone">(347) 636-6182</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-eyebrow">How it works</div>
+  <h1>Ordering is Simple</h1>
+  <p>No online portal, no minimum fuss — just call or email and we'll take it from there.</p>
+</div>
+
+<div class="ordering-body">
+  <div class="ordering-main">
+    <h2>How to Place an Order</h2>
+    <p class="intro">We keep the ordering process straightforward. No accounts to create, no complicated checkout. Here's how most customers order from us.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Browse our products</div>
+          <div class="step-body">
+            Check out our <a href="products.html">product catalog</a> to see what we carry across foil, fiber, paper, plastic and PPE categories. Most items are available by the case.
+            <div class="step-note">💡 Don't see something? Call us — we carry more than what's listed and can often source specific items.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Call or email us with your list</div>
+          <div class="step-body">
+            The fastest way to order is by phone: <a href="tel:+13476366182">(347) 636-6182</a>. Tell us what you need and how much, and we'll confirm availability and pricing right away.<br><br>
+            Prefer email? Send your order list to <a href="mailto:jingchengtradinginc@gmail.com">jingchengtradinginc@gmail.com</a> and we'll follow up promptly.
+            <div class="step-note">📱 You can also send us a message on WhatsApp — photos of products welcome if you're not sure of the name.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">We confirm your order & delivery</div>
+          <div class="step-body">
+            We'll confirm your items, total, and a delivery window. We primarily serve Queens and Long Island, with reach across all five boroughs. Call to confirm delivery to your address.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Delivery to your door</div>
+          <div class="step-body">
+            We deliver directly to your business. Most orders within our primary area are fulfilled within the same week. Payment is collected at delivery or by prior arrangement.
+            <div class="step-note">🕐 Order earlier in the week for fastest turnaround.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <h3>Ready to order?</h3>
+      <a href="tel:+13476366182" class="contact-btn phone">
+        <span class="contact-btn-icon">📞</span>
+        <div class="contact-btn-text">
+          Call Us
+          <div class="contact-btn-sub">(347) 636-6182</div>
+        </div>
+      </a>
+      <a href="mailto:jingchengtradinginc@gmail.com" class="contact-btn email">
+        <span class="contact-btn-icon">✉️</span>
+        <div class="contact-btn-text">
+          Email Us
+          <div class="contact-btn-sub">jingchengtradinginc@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://wa.me/13476366182" class="contact-btn whatsapp">
+        <span class="contact-btn-icon">💬</span>
+        <div class="contact-btn-text">
+          WhatsApp
+          <div class="contact-btn-sub">Quick questions welcome</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Business Hours</h3>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="font-weight:500;">Mon – Fri</span><span style="color:var(--muted);">9AM – 6PM</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="font-weight:500;">Saturday</span><span style="color:var(--muted);">9AM – 3PM</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="font-weight:500;">Sunday</span><span style="color:#E53E3E;">Closed</span></div>
+      </div>
+    </div>
+
+    <div class="delivery-map">
+      <h3 style="font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:var(--black);margin-bottom:8px;">Delivery Coverage</h3>
+      <p>We deliver across Queens, Long Island, and all five NYC boroughs.</p>
+      <div class="delivery-zones">
+        <div class="zone primary">
+          <div class="zone-label">Primary</div>
+          <div class="zone-name">Queens</div>
+          <div class="zone-note">Fastest delivery</div>
+        </div>
+        <div class="zone primary">
+          <div class="zone-label">Primary</div>
+          <div class="zone-name">Long Island</div>
+          <div class="zone-note">Nassau & Suffolk</div>
+        </div>
+        <div class="zone secondary">
+          <div class="zone-label">Extended</div>
+          <div class="zone-name">All 5 Boroughs</div>
+          <div class="zone-note">Call to confirm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is there a minimum order?</div>
+      <div class="faq-a">We don't have a strict minimum, but most items are sold by the case. Give us a call and we can work with you on quantities.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does delivery take?</div>
+      <div class="faq-a">Most orders within Queens and Long Island are fulfilled within the same week. Orders placed earlier in the week typically ship faster. Call us for a more specific timeframe.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you deliver to all five boroughs?</div>
+      <div class="faq-a">Our primary delivery area is Queens and Long Island, but we do reach all five boroughs. Call us at (347) 636-6182 to confirm delivery to your specific address.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I pay?</div>
+      <div class="faq-a">Payment is collected at delivery or by prior arrangement. Contact us to discuss payment options for your account.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I order a product not listed on your website?</div>
+      <div class="faq-a">Yes — we carry more than what's listed on the site and can often source specific items. Give us a call or send us a photo on WhatsApp and we'll let you know.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do you offer wholesale pricing?</div>
+      <div class="faq-a">Yes, all of our pricing is wholesale. We work directly with restaurants, supermarkets, delis and cafes on volume orders.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Jing Cheng Trading Inc. All rights reserved.</span>
+    <span style="font-size:12px;">Queens, NY &nbsp;·&nbsp; <a href="tel:+13476366182" style="color:rgba(255,255,255,0.4);text-decoration:none;">(347) 636-6182</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/13476366182?text=Hi%20Jing%20Cheng%20Trading%20%E2%80%94%20I%27d%20like%20to%20place%20an%20order" class="float-btn" title="Chat on WhatsApp">💬</a>
+
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>

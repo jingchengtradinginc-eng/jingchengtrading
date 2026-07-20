@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foil Pans & Sheets Guide — Jing Cheng Trading Inc</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@800&display=swap');
+:root{--accent:#1B6CA8;--accent-dark:#144F7C;--accent-light:#E8F2FB;--black:#111318;--ink:#2C2F36;--muted:#6B7280;--rule:#E5E7EB;--surface:#F9FAFB;--white:#FFFFFF;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--white);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;}
+.nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--black);text-decoration:none;letter-spacing:-0.03em;}
+.nav-logo .dot{color:var(--accent);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s;}
+.nav-links a:hover{color:var(--black);}
+.nav-phone{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:8px 18px;border-radius:6px;transition:background .15s,color .15s;}
+.nav-phone:hover{background:var(--accent);color:#fff;}
+.page-hero{background:var(--black);padding:72px 48px;}
+.eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+.page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,52px);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:14px;}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.5);max-width:520px;}
+.article-wrap{max-width:760px;margin:0 auto;padding:64px 48px;}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid var(--rule);}
+.meta-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-light);color:var(--accent-dark);padding:4px 10px;border-radius:4px;}
+.meta-time{font-size:13px;color:var(--muted);}
+h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--black);letter-spacing:-0.03em;margin:40px 0 12px;}
+h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:700;color:var(--black);letter-spacing:-0.01em;margin:28px 0 8px;}
+p{margin-bottom:16px;color:var(--ink);}
+ul{margin:0 0 20px 20px;}
+ul li{margin-bottom:8px;color:var(--ink);}
+.callout{background:var(--accent-light);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:28px 0;}
+.callout strong{color:var(--accent-dark);font-weight:700;}
+.callout p{color:var(--accent-dark);margin:0;}
+.product-mention{display:inline;font-weight:600;color:var(--accent-dark);}
+.comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.comp-card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:20px;}
+.comp-card h4{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:var(--black);margin-bottom:10px;}
+.comp-card ul{margin:0 0 0 16px;}
+.comp-card li{font-size:14px;margin-bottom:6px;}
+.cta-block{background:var(--black);border-radius:14px;padding:44px 48px;margin:56px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.cta-block h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:6px;}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.55);margin:0;}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.btn-accent{background:var(--accent);color:#fff;font-size:14px;font-weight:600;padding:12px 22px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:background .15s;}
+.btn-accent:hover{background:var(--accent-dark);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.3);color:#fff;font-size:14px;font-weight:600;padding:12px 22px;border-radius:8px;text-decoration:none;white-space:nowrap;}
+.btn-outline:hover{border-color:rgba(255,255,255,.6);}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;margin-bottom:32px;}
+.back-link:hover{color:var(--black);}
+footer{background:var(--black);color:rgba(255,255,255,.5);padding:28px 48px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;}
+.float-btn{position:fixed;bottom:28px;right:28px;z-index:200;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;}
+.float-btn:hover{transform:scale(1.1);}
+@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.page-hero{padding:48px 20px;}.article-wrap{padding:40px 20px;}.comparison-grid{grid-template-columns:1fr;}.cta-block{padding:32px 24px;}footer{padding:24px 20px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Jing Cheng Trading<span class="dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="order.html">Place Order</a></li>
+    <li><a href="ordering.html">How to Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:+13476366182" class="nav-phone">(347) 636-6182</a>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Foil Guide</div>
+  <h1>Foil Pans, Lids & Sheets: What to Stock for Daily Service</h1>
+  <p>A practical breakdown of the foil lineup every restaurant, deli, and caterer should keep on hand.</p>
+</div>
+
+<div class="article-wrap">
+  <a href="index.html#guides" class="back-link">← Back to guides</a>
+  <div class="article-meta">
+    <span class="meta-tag">Foil</span>
+    <span class="meta-time">4 min read</span>
+  </div>
+
+  <p>Aluminum foil products are one of the most consumed — and most often understocked — items in any commercial kitchen. Run out mid-service and you're improvising. Overstock and you're tying up cash in storage. The goal is a lean, consistent lineup that covers prep, holding, catering, and takeout without gaps.</p>
+
+  <h2>Round pans vs. rectangular pans</h2>
+  <p>The first decision is shape. Round pans are typically used for baked goods, rotisserie chicken, roasted vegetables, and portion plating. Rectangular pans are the workhorse of catering — lasagnas, rice, braised meats, and anything going into a steam table.</p>
+
+  <div class="comparison-grid">
+    <div class="comp-card">
+      <h4>Round Pans — when to use</h4>
+      <ul>
+        <li>Baked goods, pies, cakes</li>
+        <li>Roasted chicken or proteins</li>
+        <li>Individual portion service</li>
+        <li>Retail display</li>
+      </ul>
+    </div>
+    <div class="comp-card">
+      <h4>Rectangular Pans — when to use</h4>
+      <ul>
+        <li>Catering and bulk service</li>
+        <li>Steam table inserts</li>
+        <li>Lasagnas, stews, rice</li>
+        <li>Takeout for large orders</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Round pan sizes to know</h3>
+  <p>We carry <span class="product-mention">7", 8", and 9" round aluminum pans</span>, each with matching lids. The 8" and 9" are the most commonly ordered. If you're doing takeout for whole roasted chickens or pies, the 9" with a dome or foil board lid gives you good coverage without crushing the contents.</p>
+
+  <h3>Rectangular pan series — 705, 747, 788</h3>
+  <p>These three are our most-ordered rectangular pan lines. The <span class="product-mention">705 (1 lb)</span> is the standard for single-meal takeout portions. The <span class="product-mention">747 (1.5 lb)</span> is ideal for slightly larger portions or side dishes. The <span class="product-mention">788 (2.25 lb)</span> covers family-size or bulk takeout. All three have matching plastic lids sold separately — order both together so you don't run out of one without the other.</p>
+
+  <h2>Steam table pans — half vs. full, shallow vs. deep</h2>
+  <p>If you run a buffet, catering operation, or large-scale food service, steam table pans are essential. The key decisions are size and depth.</p>
+  <ul>
+    <li><span class="product-mention">Half medium pan</span> — fits most standard chafing dishes, good for single side dishes or smaller mains</li>
+    <li><span class="product-mention">Full medium steam table pan</span> — for high-volume items, soups, or bulk proteins</li>
+    <li><span class="product-mention">Full size deep pan</span> — maximum capacity, used for large catering events</li>
+    <li><span class="product-mention">768 series</span> — a popular middle-ground pan that works for both prep and service, available as pan only or pan-and-lid set</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Catering tip:</strong> Always order 10–15% more pans than you think you need for an event. They're lightweight, stack flat, and the cost of running short during service is much higher than having a few extra cases in your van.</p>
+  </div>
+
+  <h2>Foil rolls and pre-cut sheets</h2>
+  <p>Rolls are for wrapping, covering, and lining — they cut to any size you need. Sheets are faster for high-volume wrapping where every second matters. Both have their place.</p>
+
+  <h3>Rolls</h3>
+  <p>The <span class="product-mention">12"×1000 roll</span> is the standard kitchen roll — good for covering pans, wrapping sandwiches, and general use. The <span class="product-mention">18"×500 wide roll</span> is better for wrapping larger items or lining sheet pans. We also carry a <span class="product-mention">12"×1000 blue-labeled heavy-duty roll</span> for applications where puncture resistance matters.</p>
+
+  <h3>Pre-cut sheets</h3>
+  <p><span class="product-mention">12"×10¾" foil sheets</span> are ideal for delis and sandwich counters — no measuring, no cutting, just pull and wrap. They speed up service considerably during a rush and reduce waste from uneven cuts.</p>
+
+  <h2>Lids: foil board vs. plastic</h2>
+  <p>Foil board lids (like the <span class="product-mention">7" foil laminated board lid</span>) are great for catering presentations — they look clean, hold heat well, and don't require matching a specific pan brand. Plastic lids snap on tighter and are better for transport where spillage is a risk. For steam table pans in a catering setup, foil board is standard. For restaurant takeout, plastic is usually safer.</p>
+
+  <div class="cta-block">
+    <div>
+      <h3>Need to restock?</h3>
+      <p>Call us or place your order online — we deliver across Queens, Long Island, and all five boroughs.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="products.html" class="btn-outline">View Products</a>
+      <a href="order.html" class="btn-accent">Place an Order</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Jing Cheng Trading Inc. All rights reserved.</span>
+    <span style="font-size:12px;">Queens, NY &nbsp;·&nbsp; <a href="tel:+13476366182" style="color:rgba(255,255,255,0.4);text-decoration:none;">(347) 636-6182</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/13476366182" class="float-btn" title="WhatsApp">💬</a>
+</body>
+</html>

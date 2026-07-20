@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reorder Checklist for Restaurant Disposables — Jing Cheng Trading Inc</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@800&display=swap');
+:root{--accent:#1B6CA8;--accent-dark:#144F7C;--accent-light:#E8F2FB;--black:#111318;--ink:#2C2F36;--muted:#6B7280;--rule:#E5E7EB;--surface:#F9FAFB;--white:#FFFFFF;--green:#2D7D46;--green-light:#E6F4EC;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--white);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;}
+.nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--black);text-decoration:none;letter-spacing:-0.03em;}
+.nav-logo .dot{color:var(--accent);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s;}
+.nav-links a:hover{color:var(--black);}
+.nav-phone{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:8px 18px;border-radius:6px;transition:background .15s,color .15s;}
+.nav-phone:hover{background:var(--accent);color:#fff;}
+.page-hero{background:var(--black);padding:72px 48px;}
+.eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+.page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,52px);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:14px;}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.5);max-width:520px;}
+.article-wrap{max-width:760px;margin:0 auto;padding:64px 48px;}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid var(--rule);}
+.meta-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-light);color:var(--accent-dark);padding:4px 10px;border-radius:4px;}
+.meta-time{font-size:13px;color:var(--muted);}
+h2{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--black);letter-spacing:-0.03em;margin:40px 0 12px;}
+h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:700;color:var(--black);letter-spacing:-0.01em;margin:28px 0 8px;}
+p{margin-bottom:16px;color:var(--ink);}
+ul{margin:0 0 20px 20px;}
+ul li{margin-bottom:8px;color:var(--ink);}
+.callout{background:var(--accent-light);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:28px 0;}
+.callout strong{color:var(--accent-dark);font-weight:700;}
+.callout p{color:var(--accent-dark);margin:0;}
+.callout-green{background:var(--green-light);border-left:3px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:28px 0;}
+.callout-green p{color:#1A5C32;margin:0;}
+.callout-green strong{color:#1A5C32;font-weight:700;}
+.checklist{list-style:none;margin:0 0 24px 0;}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px;}
+.checklist li:last-child{border-bottom:none;}
+.check-icon{width:20px;height:20px;border-radius:4px;border:2px solid var(--rule);flex-shrink:0;margin-top:2px;}
+.check-label{font-weight:600;color:var(--black);}
+.check-note{font-size:13px;color:var(--muted);margin-top:2px;}
+.checklist-card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:24px 28px;margin:24px 0;}
+.checklist-card-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px;}
+.product-mention{display:inline;font-weight:600;color:var(--accent-dark);}
+.cta-block{background:var(--black);border-radius:14px;padding:44px 48px;margin:56px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.cta-block h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:6px;}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.55);margin:0;}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.btn-accent{background:var(--accent);color:#fff;font-size:14px;font-weight:600;padding:12px 22px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:background .15s;}
+.btn-accent:hover{background:var(--accent-dark);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.3);color:#fff;font-size:14px;font-weight:600;padding:12px 22px;border-radius:8px;text-decoration:none;white-space:nowrap;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;margin-bottom:32px;}
+.back-link:hover{color:var(--black);}
+footer{background:var(--black);color:rgba(255,255,255,.5);padding:28px 48px;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;}
+.float-btn{position:fixed;bottom:28px;right:28px;z-index:200;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;}
+.float-btn:hover{transform:scale(1.1);}
+@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.page-hero{padding:48px 20px;}.article-wrap{padding:40px 20px;}.cta-block{padding:32px 24px;}footer{padding:24px 20px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Jing Cheng Trading<span class="dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="order.html">Place Order</a></li>
+    <li><a href="ordering.html">How to Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:+13476366182" class="nav-phone">(347) 636-6182</a>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Operations</div>
+  <h1>A Simple Reorder Checklist for Restaurant Disposables</h1>
+  <p>Build a repeatable weekly routine so you never run short on containers, bags, gloves, foil, or paper.</p>
+</div>
+
+<div class="article-wrap">
+  <a href="index.html#guides" class="back-link">← Back to guides</a>
+  <div class="article-meta">
+    <span class="meta-tag">Operations</span>
+    <span class="meta-time">6 min read</span>
+  </div>
+
+  <p>Most supply shortages in a restaurant aren't caused by bad luck — they're caused by no system. When you're ordering reactively (running to the storage room Wednesday morning and realizing you have three bags of containers left), you're always one busy weekend away from a problem. A consistent weekly check takes less than ten minutes and eliminates most of it.</p>
+
+  <h2>When to check — and when to order</h2>
+  <p>Pick one day per week as your inventory check day. Many operations do it Monday morning when the previous week's numbers are fresh. Walk through storage, count open cases, and compare against your typical weekly usage. The rule of thumb: if you have less than two weeks of supply on hand, it's time to order.</p>
+
+  <div class="callout">
+    <p><strong>Delivery threshold:</strong> Our minimum for delivery is $400 in product or 15+ cases. Plan your orders to hit this — consolidating two smaller orders into one weekly order saves you pickup trips and often saves money on per-case cost.</p>
+  </div>
+
+  <h2>The weekly checklist by category</h2>
+  <p>Go through each category below. For each one, note how many open cases you have and estimate how many you'll need before your next order arrives.</p>
+
+  <h3>Containers</h3>
+  <div class="checklist-card">
+    <div class="checklist-card-title">Check these first — highest turnover</div>
+    <ul class="checklist">
+      <li><span class="check-icon"></span><div><div class="check-label">Main takeout containers</div><div class="check-note">Your most-used FH black or white series — count open cases vs. weekly usage</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Soup containers</div><div class="check-note">UNICUP 12oz, 24oz, 32oz — especially important for delis and lunch counters</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Lids</div><div class="check-note">Always check separately — lids often run out faster than containers</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Hinged containers</div><div class="check-note">If you do grab-and-go or deli display, these go fast</div></div></li>
+    </ul>
+  </div>
+
+  <h3>Bags</h3>
+  <div class="checklist-card">
+    <div class="checklist-card-title">Easy to forget until you're out</div>
+    <ul class="checklist">
+      <li><span class="check-icon"></span><div><div class="check-label">Handle bags (S, M, L)</div><div class="check-note">High turnover — most operations go through a case of medium bags every few days</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Shopping bags (1/6 or 1/8 size)</div><div class="check-note">Supermarkets and delis use hundreds per day</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Paper bags #6 and #8</div><div class="check-note">Bakery, deli counter, and dry goods</div></div></li>
+    </ul>
+  </div>
+
+  <h3>Gloves & PPE</h3>
+  <div class="checklist-card">
+    <div class="checklist-card-title">Critical for food safety compliance</div>
+    <ul class="checklist">
+      <li><span class="check-icon"></span><div><div class="check-label">Nitrile gloves (all sizes in use)</div><div class="check-note">Blue or black — check S, M, L, XL separately. Running out of one size stops that person from working</div></div></li>
+    </ul>
+  </div>
+
+  <h3>Foil & Wrap</h3>
+  <div class="checklist-card">
+    <div class="checklist-card-title">Heavy and bulky — order ahead</div>
+    <ul class="checklist">
+      <li><span class="check-icon"></span><div><div class="check-label">Foil rolls (12" and/or 18")</div><div class="check-note">These are heavy per case — factor in delivery weight</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Pre-cut foil sheets</div><div class="check-note">If you use them for wrapping, they go fast at a deli counter</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Aluminum pans and lids</div><div class="check-note">Rectangular (705, 747, 788) and round (7", 8", 9") — check each size you use</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Wax paper / no-wrap / film</div><div class="check-note">Often overlooked until mid-service</div></div></li>
+    </ul>
+  </div>
+
+  <h3>Napkins & Paper</h3>
+  <div class="checklist-card">
+    <div class="checklist-card-title">Low cost, high volume</div>
+    <ul class="checklist">
+      <li><span class="check-icon"></span><div><div class="check-label">C-fold and dinner napkins</div><div class="check-note">Cases are large — store in a dry area</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Multi-fold paper towels</div><div class="check-note">Check all bathroom and kitchen dispensers</div></div></li>
+      <li><span class="check-icon"></span><div><div class="check-label">Tissue and bath tissue</div><div class="check-note">Easy to let slip below one case</div></div></li>
+    </ul>
+  </div>
+
+  <h2>A few things that trip up most operations</h2>
+
+  <h3>Ordering containers without matching lids</h3>
+  <p>This is the most common mistake. Containers and lids are often sold separately. If you order 150 rectangular containers but forget the lids, you have 150 containers you can't use for takeout. Always add both to your order at the same time.</p>
+
+  <h3>Not accounting for seasonal spikes</h3>
+  <p>Summer means more takeout, more catering, more events. Holidays mean bulk orders from restaurants that cater family meals. Look back at what you used the same week last year, and order 15–20% more going into a known busy period.</p>
+
+  <h3>Storing in a humid or hot area</h3>
+  <p>Paper products absorb moisture. Napkins, paper bags, and tissue stored near a dishwasher or in an un-air-conditioned back room will degrade faster. Keep them in a cool, dry spot — ideally off the floor on shelving.</p>
+
+  <div class="callout-green">
+    <p><strong>Bottom line:</strong> The restaurants and delis that never run out of supplies aren't better at ordering — they're just more consistent about checking. Build the habit, stick to the same day each week, and it becomes automatic within a month.</p>
+  </div>
+
+  <div class="cta-block">
+    <div>
+      <h3>Ready to place your weekly order?</h3>
+      <p>Order online or call us — Queens, Long Island, and all five boroughs.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="products.html" class="btn-outline">View Products</a>
+      <a href="order.html" class="btn-accent">Place an Order</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Jing Cheng Trading Inc. All rights reserved.</span>
+    <span style="font-size:12px;">Queens, NY &nbsp;·&nbsp; <a href="tel:+13476366182" style="color:rgba(255,255,255,0.4);text-decoration:none;">(347) 636-6182</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/13476366182" class="float-btn" title="WhatsApp">💬</a>
+</body>
+</html>

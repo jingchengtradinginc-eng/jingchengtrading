@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jing Cheng Trading Inc — Wholesale Restaurant Supply · Queens & Long Island</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@800&display=swap');
+
+  :root {
+    --accent: #1B6CA8;
+    --accent-dark: #144F7C;
+    --accent-light: #E8F2FB;
+    --black: #111318;
+    --ink: #2C2F36;
+    --muted: #6B7280;
+    --rule: #E5E7EB;
+    --surface: #F9FAFB;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 0 48px; height: 68px;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 800;
+    color: var(--black); text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 14px; font-weight: 500;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links a.active { color: var(--black); font-weight: 600; }
+  .nav-phone {
+    font-size: 14px; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+    border: 1.5px solid var(--accent);
+    padding: 8px 18px; border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-phone:hover { background: var(--accent); color: #fff; }
+
+  /* ---- HERO ---- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    align-items: stretch;
+  }
+  .hero-left {
+    padding: 80px 64px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    background: var(--black);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 100px;
+    margin-bottom: 28px; width: fit-content;
+  }
+  .hero-tag::before { content: '●'; font-size: 8px; }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(38px, 4.5vw, 66px);
+    font-weight: 800; line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+  .hero h1 .highlight {
+    color: var(--accent);
+    display: block;
+  }
+  .hero-sub {
+    font-size: 17px; line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+    max-width: 440px; margin-bottom: 44px;
+  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+  .btn-solid {
+    background: var(--accent); color: #fff;
+    font-size: 15px; font-weight: 600;
+    padding: 14px 28px; border-radius: 8px;
+    text-decoration: none; transition: background 0.15s;
+    display: inline-block;
+  }
+  .btn-solid:hover { background: var(--accent-dark); }
+  .btn-ghost {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 15px; font-weight: 600;
+    padding: 14px 28px; border-radius: 8px;
+    text-decoration: none; transition: border-color 0.15s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.5); }
+
+  .hero-stats {
+    display: flex; gap: 36px; padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px; font-weight: 800;
+    color: #fff; line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 12px; color: rgba(255,255,255,0.45);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    background: #000;
+  }
+  .hero-img-tile {
+    overflow: hidden; position: relative;
+    background: #1a1a1a;
+  }
+  .hero-img-tile img {
+    width: 100%; height: 100%;
+    object-fit: cover; opacity: 0.8;
+    transition: opacity 0.3s, transform 0.4s;
+  }
+  .hero-img-tile:hover img { opacity: 1; transform: scale(1.05); }
+  .tile-label {
+    position: absolute; bottom: 12px; left: 12px;
+    background: rgba(0,0,0,0.65); backdrop-filter: blur(4px);
+    color: rgba(255,255,255,0.85);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px;
+  }
+
+  /* ---- CLIENTS BAR ---- */
+  .clients-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 48px;
+    display: flex; align-items: center; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .clients-label {
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted); white-space: nowrap;
+  }
+  .clients-divider { width: 1px; height: 18px; background: var(--rule); }
+  .clients-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .client-tag {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: 100px;
+    font-size: 13px; font-weight: 500; color: var(--ink);
+    padding: 5px 14px;
+  }
+
+  /* ---- SECTION SHARED ---- */
+  .section-wrap { padding: 96px 48px; }
+  .section-eyebrow {
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent); margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(30px, 3.2vw, 48px);
+    font-weight: 800; line-height: 1.06;
+    letter-spacing: -0.04em;
+    color: var(--black); margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 16px; color: var(--muted);
+    max-width: 520px; line-height: 1.7;
+    margin-bottom: 48px;
+  }
+  .section-header-row {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; margin-bottom: 48px;
+  }
+  .link-arrow {
+    font-size: 13px; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.15s;
+    padding-bottom: 2px;
+  }
+  .link-arrow:hover { border-color: var(--accent); }
+
+  /* ---- PRODUCTS ---- */
+  .products-section { background: var(--white); border-top: 1px solid var(--rule); }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .product-card {
+    border: 1px solid var(--rule);
+    border-radius: 12px; overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .product-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+  }
+  .product-card-img {
+    width: 100%; aspect-ratio: 4/3;
+    object-fit: cover; background: var(--surface);
+    display: block;
+  }
+  .product-card-body { padding: 20px; }
+  .product-card-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--black); margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .product-card-desc {
+    font-size: 14px; color: var(--muted); line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .product-card-link {
+    font-size: 13px; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  /* ---- WHY ---- */
+  .why-section {
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .why-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px; align-items: start;
+  }
+  .why-sticky { position: sticky; top: 88px; }
+  .why-grid { display: flex; flex-direction: column; gap: 0; }
+  .why-item {
+    display: grid; grid-template-columns: 48px 1fr;
+    gap: 20px; align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .why-item:last-child { border-bottom: none; }
+  .why-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: var(--accent-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .why-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--black); margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .why-body { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* ---- RESOURCES ---- */
+  .resources-section { background: var(--white); border-top: 1px solid var(--rule); }
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .article-card {
+    border: 1px solid var(--rule);
+    border-radius: 12px; overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .article-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .article-card-img {
+    width: 100%; aspect-ratio: 16/9;
+    object-fit: cover; background: var(--surface);
+    display: block;
+  }
+  .article-card-body { padding: 20px; }
+  .article-meta {
+    display: flex; gap: 10px; align-items: center;
+    margin-bottom: 12px;
+  }
+  .article-cat {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .article-time { font-size: 12px; color: var(--muted); }
+  .article-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--black); line-height: 1.25;
+    margin-bottom: 10px; letter-spacing: -0.01em;
+  }
+  .article-excerpt { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+  .article-link {
+    font-size: 13px; font-weight: 600;
+    color: var(--accent); text-decoration: none;
+  }
+
+  /* ---- CTA ---- */
+  .cta-section {
+    background: var(--accent);
+    padding: 80px 48px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px; align-items: center;
+  }
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(26px, 3vw, 42px);
+    font-weight: 800; color: #fff;
+    letter-spacing: -0.04em; line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .cta-section p { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; }
+  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+  .btn-white {
+    background: #fff; color: var(--accent);
+    font-size: 15px; font-weight: 600;
+    padding: 14px 28px; border-radius: 8px;
+    text-decoration: none; transition: background 0.15s;
+    display: inline-block; white-space: nowrap;
+  }
+  .btn-white:hover { background: rgba(255,255,255,0.9); }
+  .btn-ghost-white {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: #fff;
+    font-size: 15px; font-weight: 600;
+    padding: 14px 28px; border-radius: 8px;
+    text-decoration: none; transition: border-color 0.15s;
+    display: inline-block; white-space: nowrap;
+  }
+  .btn-ghost-white:hover { border-color: #fff; }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--black); color: rgba(255,255,255,0.5);
+    padding: 64px 48px 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 32px;
+  }
+  .footer-brand-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px; font-weight: 800;
+    color: #fff; letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+  .footer-brand-name .dot { color: var(--accent); }
+  .footer-brand-desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 240px; }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social a {
+    font-size: 13px; font-weight: 500;
+    color: rgba(255,255,255,0.4); text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-social a:hover { color: #fff; }
+  .footer-col h4 {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a {
+    font-size: 14px; color: rgba(255,255,255,0.5);
+    text-decoration: none; transition: color 0.15s;
+  }
+  .footer-col ul a:hover { color: #fff; }
+  .footer-hours-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
+  .footer-hours-day { color: rgba(255,255,255,0.6); }
+  .footer-hours-time { color: rgba(255,255,255,0.35); }
+  .footer-bottom {
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-copy { font-size: 12px; }
+  .footer-policies { display: flex; gap: 20px; }
+  .footer-policies a {
+    font-size: 12px; color: rgba(255,255,255,0.3);
+    text-decoration: none; transition: color 0.15s;
+  }
+  .footer-policies a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ---- FLOAT BUTTON ---- */
+  .float-btn {
+    position: fixed; bottom: 28px; right: 28px; z-index: 200;
+    background: #25D366; color: #fff;
+    width: 56px; height: 56px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+  .float-btn:hover { transform: scale(1.1); }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    .product-grid { grid-template-columns: 1fr 1fr; }
+    .why-layout { grid-template-columns: 1fr; gap: 40px; }
+    .why-sticky { position: static; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { min-height: 300px; }
+    .hero-left { padding: 56px 24px; }
+    .section-wrap { padding: 64px 24px; }
+    .product-grid { grid-template-columns: 1fr; }
+    .article-grid { grid-template-columns: 1fr; }
+    .cta-section { grid-template-columns: 1fr; padding: 56px 24px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .clients-bar { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jing Cheng Trading<span class="dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="order.html">Place Order</a></li>
+    <li><a href="ordering.html">How to Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="tel:+13476366182" class="nav-phone">(347) 636-6182</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Queens & Long Island · Wholesale Supply</div>
+    <h1>
+      Supplies Built<br>for
+      <span class="highlight">Daily Service.</span>
+    </h1>
+    <p class="hero-sub">
+      Foil, fiber, paper, plastic and PPE — wholesale restaurant supply stocked and delivered across Queens, Long Island, and all five boroughs.
+    </p>
+    <div class="hero-btns">
+      <a href="products.html" class="btn-solid">Browse Catalog</a>
+      <a href="tel:+13476366182" class="btn-ghost">Call (347) 636-6182</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">Queens &amp; LI</div>
+        <div class="stat-label">Primary delivery</div>
+      </div>
+      <div>
+        <div class="stat-val">All 5</div>
+        <div class="stat-label">Boroughs reachable</div>
+      </div>
+      <div>
+        <div class="stat-val">Wholesale</div>
+        <div class="stat-label">Pricing</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-img-tile">
+      <img src="https://therealpopina.com/assets/76efc3e02db3b0-foil_jpg.webp" alt="Foil products">
+      <span class="tile-label">Foil</span>
+    </div>
+    <div class="hero-img-tile">
+      <img src="https://therealpopina.com/assets/c7c652d54f1b12-paper-to-go-containers.jpg" alt="Paper products">
+      <span class="tile-label">Paper</span>
+    </div>
+    <div class="hero-img-tile">
+      <img src="https://therealpopina.com/assets/2b50ac8ea8945b-Sugarcane.jpg" alt="Fiber products">
+      <span class="tile-label">Fiber</span>
+    </div>
+    <div class="hero-img-tile">
+      <img src="https://therealpopina.com/assets/c8371f1c046162-plastic_20contianers.png" alt="Plastic products">
+      <span class="tile-label">Plastic</span>
+    </div>
+  </div>
+</section>
+
+<div class="clients-bar">
+  <span class="clients-label">We serve</span>
+  <div class="clients-divider"></div>
+  <div class="clients-tags">
+    <span class="client-tag">Restaurants</span>
+    <span class="client-tag">Supermarkets</span>
+    <span class="client-tag">Delis</span>
+    <span class="client-tag">Cafes</span>
+  </div>
+</div>
+
+<section class="products-section section-wrap">
+  <div class="section-header-row">
+    <div>
+      <div class="section-eyebrow">What we stock</div>
+      <h2 class="section-heading">Product Categories</h2>
+    </div>
+    <a href="products.html" class="link-arrow">Full catalog →</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/76efc3e02db3b0-foil_jpg.webp" alt="Foil Products">
+      <div class="product-card-body">
+        <div class="product-card-name">Foil Products</div>
+        <div class="product-card-desc">Pans, lids, rolls, sheets and heat-ready packaging for busy kitchens.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/2b50ac8ea8945b-Sugarcane.jpg" alt="Fiber Products">
+      <div class="product-card-body">
+        <div class="product-card-name">Fiber Products</div>
+        <div class="product-card-desc">Sugarcane containers, plates, bowls, bamboo items and compostable options.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/c7c652d54f1b12-paper-to-go-containers.jpg" alt="Paper Products">
+      <div class="product-card-body">
+        <div class="product-card-name">Paper Products</div>
+        <div class="product-card-desc">Bags, cups, plates, trays, straws, boxes and daily counter supplies.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/c8371f1c046162-plastic_20contianers.png" alt="Plastic Products">
+      <div class="product-card-body">
+        <div class="product-card-name">Plastic Products</div>
+        <div class="product-card-desc">Cups, containers, cutlery, trays, bags and portion solutions.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/ec940df008aa39-medical-surgeon-face-protection-kit-600nw-1689031303.webp" alt="PPE Products">
+      <div class="product-card-body">
+        <div class="product-card-name">PPE Products</div>
+        <div class="product-card-desc">Gloves, masks, gowns, hairnets, shoe covers and protective essentials.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-card-img" src="https://therealpopina.com/assets/7fb3694f31d48e-dcf790b936.png" alt="Custom Solutions">
+      <div class="product-card-body">
+        <div class="product-card-name">Custom Solutions</div>
+        <div class="product-card-desc">Private label, custom packaging and sourcing support for growing operators.</div>
+        <a href="products.html" class="product-card-link">View products →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section section-wrap">
+  <div class="why-layout">
+    <div class="why-sticky">
+      <div class="section-eyebrow">Why choose us</div>
+      <h2 class="section-heading">Wholesale Supply Built for Queens & Long Island</h2>
+      <p class="section-sub">Reliable supply coverage for restaurants, supermarkets, delis and cafes across Queens, Long Island, and beyond.</p>
+      <a href="mailto:jingchengtradinginc@gmail.com" class="btn-solid">Get in touch</a>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">📦</div>
+        <div>
+          <div class="why-title">Reliable Product Mix</div>
+          <div class="why-body">From takeout containers to gloves and paper goods, our catalog is built around the everyday needs of restaurants, supermarkets, delis and cafes across Queens and Long Island.</div>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">💲</div>
+        <div>
+          <div class="why-title">Wholesale Value</div>
+          <div class="why-body">We focus on practical, high-volume supply items with competitive wholesale pricing — products your team can reorder with confidence week after week.</div>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🚚</div>
+        <div>
+          <div class="why-title">Local Delivery — Queens, Long Island & Beyond</div>
+          <div class="why-body">We primarily serve Queens and Long Island, with delivery reach across all five boroughs. Call us to confirm coverage for your area.</div>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <div>
+          <div class="why-title">Real People, Fast Answers</div>
+          <div class="why-body">Call or email and you'll reach a person. We're here to help you figure out what to stock and keep your kitchen running without interruption.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="resources-section section-wrap">
+  <div class="section-header-row">
+    <div>
+      <div class="section-eyebrow">Resources</div>
+      <h2 class="section-heading">Foodservice Guides</h2>
+    </div>
+    <a href="ordering.html" class="link-arrow">All guides →</a>
+  </div>
+
+  <div class="article-grid">
+    <div class="article-card">
+      <img class="article-card-img" src="https://therealpopina.com/assets/c7c652d54f1b12-paper-to-go-containers.jpg" alt="Takeout packaging guide">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <span class="article-cat">Packaging</span>
+          <span class="article-time">5 min read</span>
+        </div>
+        <div class="article-title">How to Choose Takeout Packaging for Busy Kitchens</div>
+        <div class="article-excerpt">Match containers, lids and bags to your food, rush window and delivery distance.</div>
+        <a href="packaging-guide.html" class="article-link">Read guide →</a>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <img class="article-card-img" src="https://therealpopina.com/assets/76efc3e02db3b0-foil_jpg.webp" alt="Foil pans guide">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <span class="article-cat">Foil</span>
+          <span class="article-time">4 min read</span>
+        </div>
+        <div class="article-title">Foil Pans, Lids & Sheets: What to Stock for Daily Service</div>
+        <div class="article-excerpt">Keep a practical foil lineup ready for prep, catering, holding and takeout.</div>
+        <a href="foil-guide.html" class="article-link">Read guide →</a>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <img class="article-card-img" src="https://therealpopina.com/assets/2b50ac8ea8945b-Sugarcane.jpg" alt="Reorder checklist">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <span class="article-cat">Operations</span>
+          <span class="article-time">6 min read</span>
+        </div>
+        <div class="article-title">A Simple Reorder Checklist for Restaurant Disposables</div>
+        <div class="article-excerpt">Build a repeatable weekly check for containers, bags, gloves, paper and foil.</div>
+        <a href="reorder-guide.html" class="article-link">Read guide →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div>
+    <h2>Ready to Place an Order?</h2>
+    <p>Call or email us — we'll help you build a supply list and get your first order out fast.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="tel:+13476366182" class="btn-white">Call (347) 636-6182</a>
+    <a href="mailto:jingchengtradinginc@gmail.com" class="btn-ghost-white">Email Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Jing Cheng Trading<span class="dot">.</span></div>
+      <p class="footer-brand-desc">Queens-based wholesale supply for restaurants, supermarkets, delis and cafes across Queens, Long Island, and NYC.</p>
+      <div class="footer-social">
+        <a href="mailto:jingchengtradinginc@gmail.com">Email</a>
+        <a href="tel:+13476366182">(347) 636-6182</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+                <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="ordering.html">How to Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+13476366182">(347) 636-6182</a></li>
+        <li><a href="mailto:jingchengtradinginc@gmail.com">jingchengtradinginc@gmail.com</a></li>
+        <li><a href="contact.html">Queens, New York</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <div class="footer-hours-row">
+        <span class="footer-hours-day">Mon – Fri</span>
+        <span class="footer-hours-time">9AM – 6PM</span>
+      </div>
+      <div class="footer-hours-row">
+        <span class="footer-hours-day">Saturday</span>
+        <span class="footer-hours-time">9AM – 3PM</span>
+      </div>
+      <div class="footer-hours-row">
+        <span class="footer-hours-day">Sunday</span>
+        <span class="footer-hours-time">Closed</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Jing Cheng Trading Inc. All rights reserved.</span>
+    <div class="footer-policies">
+      Terms
+      Privacy
+      Accessibility
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/13476366182?text=Hi%20Jing%20Cheng%20Trading%20%E2%80%94%20I%27d%20like%20to%20ask%20about%20" class="float-btn" title="Chat on WhatsApp">💬</a>
+
+</body>
+</html>
