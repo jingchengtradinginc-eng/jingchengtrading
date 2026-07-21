@@ -628,7 +628,14 @@ function submitOrder() {
   }).join('');
 
   var totalCasesCount = ordered.reduce(function(s,p){ return s + qtys[p.id]; }, 0);
-  var orderTotalStr = (allPriced && grandTotal > 0) ? '$' + grandTotal.toFixed(2) : 'Prices not entered';
+  var unpricedCount = ordered.filter(function(p) {
+    var inp = document.getElementById('pi-' + p.id);
+    var price = inp ? parseFloat(inp.value) : NaN;
+    return isNaN(price) || price <= 0;
+  }).length;
+  var orderTotalStr = grandTotal > 0
+    ? '$' + grandTotal.toFixed(2) + (unpricedCount > 0 ? ' (partial — ' + unpricedCount + ' item' + (unpricedCount > 1 ? 's' : '') + ' without price)' : '')
+    : 'No prices entered';
 
   var params = {
     customer_name : name,
