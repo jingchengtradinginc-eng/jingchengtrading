@@ -3,151 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Place an Order — Jing Cheng Trading Inc</title>
+<meta name="description" content="Place an order with Jing Cheng Trading Inc — wholesale foodservice packaging delivered across Queens, Long Island, and NYC.">
+<title>Place an Order — Jing Cheng Trading Inc | Wholesale Foodservice Packaging</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@800&display=swap');
-:root{--accent:#1B6CA8;--accent-dark:#144F7C;--accent-light:#E8F2FB;--black:#111318;--ink:#2C2F36;--muted:#6B7280;--rule:#E5E7EB;--surface:#F9FAFB;--white:#FFFFFF;--green:#2D7D46;--green-light:#E6F4EC;--warn:#D97706;--warn-light:#FEF3C7;--red:#C53030;--red-light:#FEF2F2;}
+:root{
+  --accent:#1B6CA8;--accent-dark:#144F7C;--accent-light:#E8F2FB;
+  --black:#111318;--ink:#2C2F36;--muted:#6B7280;
+  --rule:#E5E7EB;--surface:#F9FAFB;--white:#FFFFFF;--green:#2D7D46;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--surface);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased;}
+
+/* ── Nav ── */
 nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;}
 .nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--black);text-decoration:none;letter-spacing:-.03em;}
 .nav-logo .dot{color:var(--accent);}
-.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links{display:flex;gap:28px;list-style:none;}
 .nav-links a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s;}
-.nav-links a:hover,.nav-links a.active{color:var(--black);}
-.nav-links a.active{font-weight:600;}
-.nav-phone{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:8px 18px;border-radius:6px;transition:background .15s,color .15s;}
-.nav-phone:hover{background:var(--accent);color:#fff;}
-.page-hero{background:var(--black);padding:52px 48px;}
-.page-hero-eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px;}
-.page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(28px,3.6vw,48px);font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1.08;margin-bottom:10px;}
-.page-hero p{font-size:15px;color:rgba(255,255,255,.5);max-width:460px;}
-.notices{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--rule);}
-.notice{flex:1;min-width:260px;padding:13px 24px;font-size:13px;font-weight:500;display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
-.notice-delivery{background:var(--warn-light);color:#92400E;border-right:1px solid #FDE68A;}
-.notice-more{background:var(--accent-light);color:var(--accent-dark);}
-.notice strong{font-weight:700;}
-.notice a{color:inherit;font-weight:700;}
-.order-layout{display:grid;grid-template-columns:1fr 340px;gap:20px;padding:22px 48px 56px;align-items:start;}
-.catalog{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:clip;}
-.catalog-header{padding:18px 22px;border-bottom:1px solid var(--rule);position:sticky;top:68px;z-index:10;background:var(--white);}
-.cat-search{width:100%;padding:9px 14px;border:1.5px solid var(--rule);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;margin-bottom:12px;transition:border-color .15s;}
-.cat-search:focus{border-color:var(--accent);}
-.cat-tabs{display:flex;gap:5px;flex-wrap:wrap;}
-.cat-tab{font-size:11px;font-weight:600;padding:5px 13px;border-radius:100px;border:1.5px solid var(--rule);color:var(--muted);background:var(--white);cursor:pointer;transition:all .15s;white-space:nowrap;letter-spacing:.01em;}
-.cat-tab:hover{border-color:var(--accent);color:var(--accent);}
-.cat-tab.active{background:var(--accent);color:#fff;border-color:var(--accent);}
-.cat-section{border-bottom:1px solid var(--rule);}
-.cat-section.hidden{display:none;}
-.cat-section:last-of-type{border-bottom:none;}
-.cat-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 22px 6px;background:var(--surface);border-bottom:1px solid var(--rule);border-left:3px solid var(--accent);}
-.product-row{display:grid;grid-template-columns:46px 1fr 108px 94px;gap:10px;align-items:center;padding:9px 18px;border-bottom:.5px solid var(--rule);transition:background .1s;}
-.product-row.hidden{display:none;}
-.product-row:hover{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent);}
-.product-row:last-child{border-bottom:none;}
-.prod-img{width:46px;height:46px;border-radius:7px;object-fit:cover;background:var(--surface);display:block;flex-shrink:0;}
-.prod-placeholder{width:46px;height:46px;border-radius:7px;background:var(--surface);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.prod-name{font-size:13px;font-weight:600;color:var(--black);line-height:1.25;letter-spacing:-.01em;}
-.prod-detail{font-size:11px;color:var(--muted);margin-top:1px;}
-.added-tag{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--accent-light);color:var(--accent-dark);padding:1px 5px;border-radius:3px;margin-left:4px;vertical-align:middle;}
-.price-wrap{display:flex;align-items:center;gap:2px;}
-.price-pre{font-size:12px;color:var(--muted);}
-.price-suf{font-size:10px;color:var(--muted);white-space:nowrap;}
-.price-inp{width:66px;padding:5px;border:1.5px solid var(--rule);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;text-align:center;transition:border-color .15s;}
-.price-inp:focus{border-color:var(--accent);}
-.price-inp.set{border-color:#86EFAC;background:#F0FDF4;}
-.qty-wrap{display:flex;align-items:center;justify-content:flex-end;}
-.qbtn{width:26px;height:26px;border:1.5px solid var(--rule);background:var(--white);color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
-.qbtn:first-child{border-radius:6px 0 0 6px;}
-.qbtn:last-child{border-radius:0 6px 6px 0;}
-.qbtn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
-.qval{width:30px;height:26px;border-top:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);border-left:none;border-right:none;background:var(--white);text-align:center;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;color:var(--black);}
-.qval.on{background:var(--accent-light);color:var(--accent-dark);border-color:var(--accent);}
-.more-note{padding:18px 22px;background:var(--accent-light);text-align:center;font-size:13px;color:var(--accent-dark);line-height:1.6;border-top:1px solid #BDD8F0;}
-.more-note strong{font-weight:700;}
-.more-note a{color:var(--accent-dark);font-weight:700;}
-.no-results{padding:36px 24px;text-align:center;color:var(--muted);font-size:14px;}
-.sidebar{position:sticky;top:88px;max-height:calc(100vh - 108px);overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent;padding-right:2px;}
-.price-ctrl{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;}
-.price-ctrl h4{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--black);margin-bottom:5px;}
-.price-ctrl p{font-size:12px;color:var(--muted);margin-bottom:11px;line-height:1.5;}
-.clear-btn{width:100%;background:var(--surface);border:1.5px solid var(--rule);color:var(--ink);font-size:13px;font-weight:600;padding:8px;border-radius:8px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px;}
-.clear-btn:hover{background:var(--red-light);border-color:#FCA5A5;color:var(--red);}
-.summary-card{background:var(--white);border:1px solid var(--rule);border-radius:12px;overflow:hidden;}
-.sum-hdr{padding:14px 18px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
-.sum-hdr h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;color:var(--black);letter-spacing:-.01em;}
-.sum-badge{background:var(--accent);color:#fff;font-size:11px;font-weight:700;min-width:20px;height:20px;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:0 5px;}
-.sum-empty{padding:28px 18px;text-align:center;}
-.sum-empty-icon{font-size:30px;margin-bottom:7px;}
-.sum-empty-txt{font-size:13px;color:var(--muted);}
-.sum-list{max-height:210px;overflow-y:auto;}
-.sum-item{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 14px;border-bottom:.5px solid var(--rule);gap:8px;}
-.sum-item:last-child{border-bottom:none;}
-.sum-item-l{flex:1;min-width:0;}
-.sum-item-name{font-size:12px;font-weight:600;color:var(--black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3;}
-.sum-item-qty{font-size:11px;color:var(--muted);}
-.sum-item-price{font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;}
-.sum-remove{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:0;line-height:1;flex-shrink:0;}
-.sum-remove:hover{color:var(--red);}
-.sum-totals{padding:11px 14px;border-top:1px solid var(--rule);background:var(--surface);}
-.sum-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px;}
-.sum-row.bold{font-weight:700;color:var(--black);}
-.sum-hint{font-size:11px;color:var(--muted);margin-top:5px;}
-.del-status{padding:10px 14px;border-top:1px solid var(--rule);font-size:12px;line-height:1.5;display:flex;gap:7px;align-items:flex-start;}
-.del-status.ok{background:var(--green-light);color:#1A5C32;}
-.del-status.warn{background:var(--warn-light);color:#92400E;}
-.del-status.off{display:none;}
-.form-card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px;}
-.form-card h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;color:var(--black);margin-bottom:14px;letter-spacing:-.01em;}
-.fg{margin-bottom:11px;}
-.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:4px;}
-.fg input,.fg textarea{width:100%;padding:8px 11px;border:1.5px solid var(--rule);border-radius:7px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);background:var(--white);outline:none;transition:border-color .15s;}
-.fg input:focus,.fg textarea:focus{border-color:var(--accent);}
-.fg textarea{resize:vertical;min-height:66px;}
-.sub-btn{width:100%;background:var(--accent);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:13px;border:none;border-radius:9px;cursor:pointer;transition:background .15s;margin-top:4px;}
-.sub-btn:hover{background:var(--accent-dark);}
-.form-hint{font-size:11px;color:var(--muted);text-align:center;margin-top:7px;line-height:1.5;}
-.success{display:none;padding:36px 18px;text-align:center;}
-.success.on{display:block;}
-.success-icon{font-size:44px;margin-bottom:10px;}
-.success h2{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:7px;letter-spacing:-.02em;}
-.success p{font-size:13px;color:var(--muted);line-height:1.6;}
-.reset-btn{margin-top:14px;background:var(--surface);border:1.5px solid var(--rule);color:var(--ink);font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;}
-.float-btn{position:fixed;bottom:28px;right:28px;z-index:200;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;}
-.float-btn:hover{transform:scale(1.1);}
-footer{background:var(--black);color:rgba(255,255,255,.5);padding:28px 48px 22px;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.footer-copy{font-size:12px;}
-@media(max-width:1060px){.order-layout{grid-template-columns:1fr;}.sidebar{position:static;}}
-@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.page-hero{padding:44px 20px;}.order-layout{padding:16px 16px 48px;}.product-row{grid-template-columns:40px 1fr 86px 80px;gap:7px;padding:8px 12px;}.catalog-header{padding:14px 16px;}footer{padding:24px 20px 18px;}}
-
-/* ── Mobile hamburger & nav ─────────────────────────────────── */
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:202;}
+.nav-links a:hover,.nav-links a.active{color:var(--black);font-weight:600;}
+.nav-cta{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);padding:8px 18px;border-radius:6px;transition:all .15s;}
+.nav-cta:hover{background:var(--accent);color:#fff;}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
 .hamburger span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .25s,opacity .25s;}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+
+/* ── Mobile nav panel ── */
 .mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:300;opacity:0;transition:opacity .25s;}
 .mob-overlay.open{display:block;opacity:1;}
 .mob-panel{position:fixed;top:0;right:-320px;width:min(300px,85vw);height:100%;background:var(--white);z-index:301;transition:right .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-4px 0 24px rgba(0,0,0,.12);}
 .mob-panel.open{right:0;}
 .mob-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--rule);}
-.mob-logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:var(--black);letter-spacing:-.03em;text-decoration:none;}
-.mob-logo .dot{color:var(--accent);}
-.mob-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);line-height:1;padding:2px 4px;}
-.mob-links{list-style:none;padding:12px 0;flex:1;overflow-y:auto;}
-.mob-links li a{display:flex;align-items:center;gap:10px;padding:14px 22px;font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;border-left:3px solid transparent;transition:all .15s;}
+.mob-brand{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:var(--black);letter-spacing:-.03em;}
+.mob-brand .dot{color:var(--accent);}
+.mob-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);padding:2px 4px;}
+.mob-links{list-style:none;padding:12px 0;flex:1;}
+.mob-links li a{display:block;padding:14px 22px;font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;border-left:3px solid transparent;transition:all .15s;}
 .mob-links li a:hover,.mob-links li a.mob-active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-light);}
 .mob-foot{padding:20px 22px;border-top:1px solid var(--rule);}
-.mob-call{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;font-size:15px;padding:13px;border-radius:9px;text-decoration:none;transition:background .15s;}
-.mob-call:hover{background:var(--accent-dark);}
-.mob-wa{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;}
-.mob-wa:hover{color:var(--accent);}
+.mob-call{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;font-size:15px;padding:13px;border-radius:9px;text-decoration:none;}
+
+/* ── Hero ── */
+.hero{background:var(--black);padding:52px 48px;}
+.hero-eye{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px;}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,48px);font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1.08;margin-bottom:8px;}
+.hero p{font-size:15px;color:rgba(255,255,255,.5);max-width:460px;}
+
+/* ── More items banner ── */
+.more-banner{background:var(--accent-light);border-bottom:1px solid #BDD8F0;padding:13px 48px;display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--accent-dark);line-height:1.5;}
+.more-banner a{color:var(--accent-dark);font-weight:600;}
+
+/* ── Layout ── */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:20px 48px 64px;max-width:1400px;margin:0 auto;align-items:start;}
+
+/* ── Catalog card ── */
+.catalog{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:clip;}
+.catalog-head{padding:16px 22px;border-bottom:1px solid var(--rule);position:sticky;top:68px;z-index:10;background:var(--white);}
+.catalog-head h2{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;color:var(--black);margin-bottom:12px;}
+.search-row{display:flex;gap:8px;margin-bottom:12px;}
+.search-input{flex:1;padding:8px 12px;border:1.5px solid var(--rule);border-radius:7px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;transition:border-color .15s;}
+.search-input:focus{border-color:var(--accent);}
+.tab-bar{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;}
+.tab-bar::-webkit-scrollbar{display:none;}
+.tab-btn{font-size:11px;font-weight:600;padding:5px 13px;border-radius:100px;border:1.5px solid var(--rule);color:var(--muted);background:var(--white);cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;}
+.tab-btn:hover{border-color:var(--accent);color:var(--accent);}
+.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.section-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 22px 6px;background:var(--surface);border-bottom:1px solid var(--rule);border-left:3px solid var(--accent);}
+.prod-row{display:grid;grid-template-columns:46px 1fr 90px 96px;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--rule);transition:background .1s;}
+.prod-row:hover{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent);}
+.prod-row.hidden{display:none;}
+.prod-img{width:46px;height:46px;object-fit:cover;border-radius:7px;flex-shrink:0;}
+.prod-ph{width:46px;height:46px;border-radius:7px;background:var(--surface);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.prod-name{font-size:13px;font-weight:600;color:var(--black);line-height:1.25;letter-spacing:-.01em;}
+.prod-detail{font-size:11px;color:var(--muted);margin-top:2px;}
+.price-wrap{position:relative;}
+.price-wrap::before{content:'$';position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);}
+.price-inp{width:100%;padding:6px 6px 6px 18px;border:1.5px solid var(--rule);border-radius:6px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;transition:border-color .15s;}
+.price-inp:focus{border-color:var(--accent);}
+.price-inp.set{border-color:#86CEAB;background:#F0FAF5;}
+.qty-ctrl{display:flex;align-items:center;}
+.qty-btn{width:28px;height:28px;border:1.5px solid var(--rule);background:var(--white);color:var(--ink);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:all .15s;}
+.qty-btn:first-child{border-radius:6px 0 0 6px;}
+.qty-btn:last-child{border-radius:0 6px 6px 0;}
+.qty-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.qty-num{width:30px;height:28px;border-top:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;background:var(--white);}
+.qty-num.on{background:var(--accent-light);color:var(--accent-dark);}
+.no-results{padding:40px 24px;text-align:center;font-size:14px;color:var(--muted);}
+
+/* ── Sidebar ── */
+.sidebar{position:sticky;top:88px;max-height:calc(100vh - 108px);overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent;}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;}
+.card-head{padding:14px 18px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+.card-title{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:var(--black);letter-spacing:-.01em;}
+.badge{background:var(--accent);color:#fff;font-size:11px;font-weight:700;min-width:20px;height:20px;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:0 4px;}
+.summary-empty{padding:28px 18px;text-align:center;font-size:13px;color:var(--muted);}
+.summary-items{max-height:200px;overflow-y:auto;}
+.summary-item{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;border-bottom:1px solid var(--rule);gap:8px;}
+.summary-item:last-child{border-bottom:none;}
+.s-name{font-size:12px;font-weight:600;color:var(--black);}
+.s-qty{font-size:11px;color:var(--muted);}
+.s-remove{background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;padding:0;transition:color .15s;}
+.s-remove:hover{color:#E53E3E;}
+.summary-total{padding:10px 16px;border-top:1px solid var(--rule);font-size:13px;font-weight:700;color:var(--black);display:flex;justify-content:space-between;}
+.summary-total span:last-child{color:var(--accent);}
+.summary-note{padding:8px 16px;font-size:11px;color:var(--muted);border-top:1px solid var(--rule);}
+.form-body{padding:18px;}
+.fg{margin-bottom:11px;}
+.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:4px;}
+.fg input,.fg textarea,.fg select{width:100%;padding:9px 12px;border:1.5px solid var(--rule);border-radius:7px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);background:var(--white);outline:none;transition:border-color .15s;}
+.fg input:focus,.fg textarea:focus{border-color:var(--accent);}
+.fg textarea{resize:vertical;min-height:64px;}
+.submit-btn{width:100%;background:var(--accent);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:13px;border:none;border-radius:9px;cursor:pointer;transition:background .15s;margin-top:4px;}
+.submit-btn:hover{background:var(--accent-dark);}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;}
+.form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;line-height:1.5;}
+.success{display:none;padding:24px 18px;text-align:center;}
+.success h3{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:var(--green);margin-bottom:8px;}
+.success p{font-size:13px;color:var(--muted);line-height:1.6;}
+.reset-btn{margin-top:14px;background:var(--surface);border:1.5px solid var(--rule);color:var(--ink);font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;cursor:pointer;}
+.need-more{background:var(--accent-light);border:1px solid #BDD8F0;border-radius:12px;padding:16px;font-size:13px;color:var(--accent-dark);line-height:1.5;}
+.need-more strong{display:block;font-weight:700;margin-bottom:4px;}
+.need-more-btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+.nm-btn{font-size:12px;font-weight:600;padding:7px 12px;border-radius:6px;text-decoration:none;}
+.nm-call{background:var(--accent);color:#fff;}
+.nm-email{background:var(--black);color:#fff;}
+
+/* ── Footer ── */
+footer{background:var(--black);padding:24px 48px;}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.4);}
+.foot-info{font-size:12px;color:rgba(255,255,255,.4);}
+.foot-info a{color:rgba(255,255,255,.4);text-decoration:none;}
+
+/* ── WhatsApp float ── */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:200;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.18);transition:transform .2s;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* ── Responsive ── */
+@media(max-width:1000px){.layout{grid-template-columns:1fr;padding:16px;}.sidebar{position:static;max-height:none;}}
 @media(max-width:768px){
+  nav{padding:0 16px;}
+  .nav-links,.nav-cta{display:none!important;}
   .hamburger{display:flex;}
-  .nav-links{display:none!important;}
-  .nav-phone{display:none!important;}
+  .hero{padding:40px 20px;}
+  .more-banner{padding:12px 20px;}
+  .layout{padding:12px;}
+  .prod-row{grid-template-columns:40px 1fr 78px 88px;gap:8px;padding:8px 12px;}
+  .catalog-head{padding:12px 14px;}
+  .section-label{padding:8px 14px 5px;}
+  footer{padding:20px;}
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -163,98 +170,109 @@ footer{background:var(--black);color:rgba(255,255,255,.5);padding:28px 48px 22px
     <li><a href="ordering.html">How to Order</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="tel:+13476366182" class="nav-phone">(347) 636-6182</a>
-  <button class="hamburger" id="hamBtn" onclick="toggleMobNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <a href="tel:+13476366182" class="nav-cta">(347) 636-6182</a>
+  <button class="hamburger" id="hamBtn" onclick="toggleMob()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mob-overlay" id="mobOverlay" onclick="closeMobNav()"></div>
+
+<div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
 <div class="mob-panel" id="mobPanel">
   <div class="mob-head">
-    <a href="index.html" class="mob-logo">Jing Cheng Trading<span class="dot">.</span></a>
-    <button class="mob-close" onclick="closeMobNav()">&#x2715;</button>
+    <span class="mob-brand">Jing Cheng Trading<span class="dot">.</span></span>
+    <button class="mob-close" onclick="closeMob()">&#x2715;</button>
   </div>
   <ul class="mob-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="products.html">Products</a></li>
-    <li><a href="order.html">Place Order</a></li>
+    <li><a href="order.html" class="mob-active">Place Order</a></li>
     <li><a href="ordering.html">How to Order</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="mob-foot">
     <a href="tel:+13476366182" class="mob-call">&#128222; (347) 636-6182</a>
-    <a href="https://wa.me/13476366182" class="mob-wa">&#128172; WhatsApp us</a>
   </div>
 </div>
 
-
-<div class="page-hero">
-  <div class="page-hero-eyebrow">Online ordering</div>
+<div class="hero">
+  <div class="hero-eye">Online ordering</div>
   <h1>Place Your Order</h1>
-  <p>Browse products, set quantities, and submit — we'll follow up to confirm delivery and pricing.</p>
+  <p>Wholesale foodservice packaging — browse our catalog, enter your agreed prices, add quantities, and submit.</p>
 </div>
 
-<div class="notices">
-  <div class="notice notice-delivery">
-    📦 <span><strong>Delivery minimum:</strong> $400 order value <em>or</em> 15+ cases. Orders below both thresholds require pickup.</span>
-  </div>
-  <div class="notice notice-more">
-    🔍 <span><strong>Don't see what you need?</strong> Call <a href="tel:+13476366182">(347) 636-6182</a> or email us — we carry many more products not listed here.</span>
+<div class="more-banner">
+  <span style="font-size:16px;flex-shrink:0;">💡</span>
+  <div>
+    <strong>More products available.</strong>
+    This list covers our most common items — we carry many more.
+    Call <a href="tel:+13476366182">(347) 636-6182</a> or email <a href="mailto:jingchengtradinginc@gmail.com">jingchengtradinginc@gmail.com</a> for anything not listed.
   </div>
 </div>
 
-<div class="order-layout">
+<div class="layout">
 
+  <!-- LEFT: Catalog -->
   <div class="catalog">
-    <div class="catalog-header">
-      <input type="text" class="cat-search" id="searchInput" placeholder="Search products (e.g. foil pan, nitrile glove, soup cup…)" oninput="filterProds()">
-      <div class="cat-tabs" id="catTabs"></div>
+    <div class="catalog-head">
+      <h2>Select Products</h2>
+      <div class="search-row">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search products..." oninput="filterProds()">
+      </div>
+      <div class="tab-bar" id="tabBar"></div>
     </div>
     <div id="prodList"></div>
-    <div class="more-note">
-      📞 <strong>Looking for something not listed?</strong> We carry many more products than shown here.<br>
-      Call <a href="tel:+13476366182">(347) 636-6182</a> or email <a href="mailto:jingchengtradinginc@gmail.com">jingchengtradinginc@gmail.com</a> for full availability.
-    </div>
   </div>
 
+  <!-- RIGHT: Sidebar -->
   <div class="sidebar">
 
-    <div class="price-ctrl">
-      <h4>Your Agreed Prices</h4>
-      <p>Enter the price per case you've agreed on with us next to each product. Prices save automatically on your device for future orders.</p>
-      <button class="clear-btn" onclick="clearPrices()">🗑&nbsp; Clear My Prices</button>
+    <!-- Order summary -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Your Order</span>
+        <div class="badge" id="badge">0</div>
+      </div>
+      <div id="summaryEmpty" class="summary-empty">
+        🛒 No items yet — use + to add products.
+      </div>
+      <div id="summaryItems" class="summary-items" style="display:none;"></div>
+      <div id="summaryTotal" class="summary-total" style="display:none;">
+        <span>Estimated Total</span><span id="totalAmt">—</span>
+      </div>
+      <div id="summaryNote" class="summary-note" style="display:none;">
+        Quantities in cases. Prices based on your agreed rate.
+      </div>
     </div>
 
-    <div class="summary-card">
-      <div class="sum-hdr">
-        <h3>Your Order</h3>
-        <div class="sum-badge" id="sumBadge">0</div>
-      </div>
-      <div id="sumEmpty" class="sum-empty">
-        <div class="sum-empty-icon">🛒</div>
-        <div class="sum-empty-txt">Use the + buttons to add products</div>
-      </div>
-      <div id="sumList" class="sum-list" style="display:none;"></div>
-      <div id="sumTotals" class="sum-totals" style="display:none;"></div>
-      <div id="delStatus" class="del-status off"></div>
-    </div>
-
-    <div class="form-card">
+    <!-- Customer form -->
+    <div class="card">
       <div id="formView">
-        <h3>Your Details</h3>
-        <div class="fg"><label>Name *</label><input type="text" id="fName" placeholder="Jane Smith"></div>
-        <div class="fg"><label>Business Name</label><input type="text" id="fBiz" placeholder="Your Restaurant or Store"></div>
-        <div class="fg"><label>Phone *</label><input type="tel" id="fPhone" placeholder="(718) 000-0000"></div>
-        <div class="fg"><label>Email *</label><input type="email" id="fEmail" placeholder="you@example.com"></div>
-        <div class="fg"><label>Delivery Address</label><input type="text" id="fAddr" placeholder="123 Main St, Queens, NY"></div>
-        <div class="fg"><label>Notes</label><textarea id="fNotes" placeholder="Specific sizes, delivery window, special requests…"></textarea></div>
-        <button class="sub-btn" onclick="submitOrder()">Submit Order Request</button>
-        <p class="form-hint">We'll follow up to confirm delivery schedule and final pricing.</p>
+        <div class="card-head"><span class="card-title">Your Details</span></div>
+        <div class="form-body">
+          <div class="fg"><label>Name *</label><input id="fName" type="text" placeholder="Jane Smith"></div>
+          <div class="fg"><label>Business</label><input id="fBiz" type="text" placeholder="Your restaurant or store"></div>
+          <div class="fg"><label>Phone *</label><input id="fPhone" type="tel" placeholder="(718) 000-0000"></div>
+          <div class="fg"><label>Email *</label><input id="fEmail" type="email" placeholder="you@example.com"></div>
+          <div class="fg"><label>Delivery Address</label><input id="fAddr" type="text" placeholder="123 Main St, Queens, NY"></div>
+          <div class="fg"><label>Notes</label><textarea id="fNotes" placeholder="Delivery window, special requests..."></textarea></div>
+          <button class="submit-btn" id="submitBtn" onclick="submitOrder()">Submit Order</button>
+          <div class="form-note">We'll confirm your order and arrange delivery.</div>
+        </div>
       </div>
       <div id="successView" class="success">
-        <div class="success-icon">✅</div>
-        <h2>Order Submitted!</h2>
-        <p>Your order request has been sent to Jing Cheng Trading. We'll follow up to confirm delivery and pricing.</p>
-        <p style="margin-top:10px;">Questions? Call <a href="tel:+13476366182" style="color:var(--accent);font-weight:600;">(347) 636-6182</a></p>
+        <div style="font-size:44px;margin-bottom:10px;">✅</div>
+        <h3>Order Sent!</h3>
+        <p>Your order has been sent to Jing Cheng Trading. We'll be in touch to confirm delivery.</p>
+        <p style="margin-top:8px;">Questions? Call <a href="tel:+13476366182" style="color:var(--accent);font-weight:600;">(347) 636-6182</a></p>
         <button class="reset-btn" onclick="resetOrder()">Place Another Order</button>
+      </div>
+    </div>
+
+    <!-- Need more -->
+    <div class="need-more">
+      <strong>Don't see what you need?</strong>
+      We carry many more products not listed here. Call or email us for anything specific.
+      <div class="need-more-btns">
+        <a href="tel:+13476366182" class="nm-btn nm-call">(347) 636-6182</a>
+        <a href="mailto:jingchengtradinginc@gmail.com" class="nm-btn nm-email">Email Us</a>
       </div>
     </div>
 
@@ -262,333 +280,344 @@ footer{background:var(--black);color:rgba(255,255,255,.5);padding:28px 48px 22px
 </div>
 
 <footer>
-  <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2026 Jing Cheng Trading Inc. All rights reserved.</span>
-    <span style="font-size:12px;">Queens, NY &middot; <a href="tel:+13476366182" style="color:rgba(255,255,255,.4);text-decoration:none;">(347) 636-6182</a></span>
+  <div class="foot-row">
+    <span class="foot-copy">© 2026 Jing Cheng Trading Inc. All rights reserved.</span>
+    <span class="foot-info">Queens, NY · <a href="tel:+13476366182">(347) 636-6182</a></span>
   </div>
 </footer>
 
-<a href="https://wa.me/13476366182?text=Hi%20Jing%20Cheng%20Trading%20%E2%80%94%20I%27d%20like%20to%20place%20an%20order" class="float-btn" title="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/13476366182?text=Hi%20Jing%20Cheng%20Trading%20%E2%80%94%20I%27d%20like%20to%20place%20an%20order" class="wa-btn" title="WhatsApp">💬</a>
 
 <script>
-const IMGS = {
-  foil:'https://therealpopina.com/assets/76efc3e02db3b0-foil_jpg.webp',
-  plastic:'https://therealpopina.com/assets/c8371f1c046162-plastic_20contianers.png',
-  paper:'https://therealpopina.com/assets/c7c652d54f1b12-paper-to-go-containers.jpg',
-  fiber:'https://therealpopina.com/assets/2b50ac8ea8945b-Sugarcane.jpg',
-  ppe:'https://therealpopina.com/assets/ec940df008aa39-medical-surgeon-face-protection-kit-600nw-1689031303.webp'
+// ── EmailJS credentials ────────────────────────────────────────────────────
+var EJS_KEY      = 'YOUR_lQuI7HY0Dw2XEnDYS';   // Account → General → Public Key
+var EJS_SERVICE  = 'YOUR_service_ztvxqfw';   // Email Services → Service ID
+var EJS_TEMPLATE = 'YOUR_template_6bpywgu';  // Email Templates → Template ID
+// ──────────────────────────────────────────────────────────────────────────
+
+emailjs.init(EJS_KEY);
+
+// ── Image map ─────────────────────────────────────────────────────────────
+var IMGS = {
+  foil:    'https://therealpopina.com/assets/76efc3e02db3b0-foil_jpg.webp',
+  plastic: 'https://therealpopina.com/assets/c8371f1c046162-plastic_20contianers.png',
+  paper:   'https://therealpopina.com/assets/c7c652d54f1b12-paper-to-go-containers.jpg',
+  fiber:   'https://therealpopina.com/assets/2b50ac8ea8945b-Sugarcane.jpg',
+  ppe:     'https://therealpopina.com/assets/ec940df008aa39-medical-surgeon-face-protection-kit-600nw-1689031303.webp'
 };
-const ICONS = {aluminum:'🧱',containers:'📦',foodboxes:'🥡',deli:'🍜',cups:'☕',plates:'🍽️',bags:'🛍️',cutlery:'🥢',napkins:'🧻',ppe:'🧤',cleaning:'🧹'};
-const CATS = [
-  {id:'all',label:'All Products'},
-  {id:'aluminum',label:'Aluminum & Foil'},
-  {id:'containers',label:'Food Containers'},
-  {id:'foodboxes',label:'Food Boxes'},
-  {id:'deli',label:'Deli & Soup'},
-  {id:'cups',label:'Cups & Lids'},
-  {id:'plates',label:'Plates & Trays'},
-  {id:'bags',label:'Bags'},
-  {id:'cutlery',label:'Cutlery & Chopsticks'},
-  {id:'napkins',label:'Napkins & Paper'},
-  {id:'ppe',label:'Gloves & PPE'},
-  {id:'cleaning',label:'Cleaning'}
+
+var ICONS = {pans:'🥘',containers:'📦',deli:'🥣',cups:'☕',bags:'🛍️',other:'📄',ppe:'🧤'};
+
+// ── Tabs ──────────────────────────────────────────────────────────────────
+var TABS = [
+  {key:'all',    label:'All Products'},
+  {key:'pans',   label:'Pans & Foil'},
+  {key:'containers', label:'Containers'},
+  {key:'deli',   label:'Deli & Soup'},
+  {key:'cups',   label:'Cups & Plates'},
+  {key:'bags',   label:'Bags'},
+  {key:'other',  label:'Paper & Cutlery'},
+  {key:'ppe',    label:'PPE & Cleaning'}
 ];
 
-const P = [
-  {id:'al01',cat:'aluminum',n:'7" Aluminum Round Pan',d:'Case pricing',img:'foil'},
-  {id:'al02',cat:'aluminum',n:'7" Foil Laminated Board Lid',d:'500pcs/case',img:'foil'},
-  {id:'al03',cat:'aluminum',n:'8" Aluminum Round Pan',d:'Case pricing',img:'foil'},
-  {id:'al04',cat:'aluminum',n:'8" Aluminum Round Pan Lid',d:'500pcs/case',img:'foil'},
-  {id:'al05',cat:'aluminum',n:'9" Aluminum Round Pan',d:'Case pricing',img:'foil'},
-  {id:'al06',cat:'aluminum',n:'9" Aluminum Pan Plastic Lids',d:'Case pricing',img:'foil'},
-  {id:'al07',cat:'aluminum',n:'1 Lb Aluminum Rectangular Pan (TN-705)',d:'Case pricing',img:'foil'},
-  {id:'al08',cat:'aluminum',n:'1 Lb Aluminum Pan Plastic Lids (705)',d:'Case pricing',img:'foil'},
-  {id:'al09',cat:'aluminum',n:'1.5 Lb Aluminum Rectangular Pan (TN)',d:'500pcs/case',img:'foil'},
-  {id:'al10',cat:'aluminum',n:'1.5 Lb Aluminum Pan Plastic Lids (747)',d:'500pcs/case',img:'foil'},
-  {id:'al11',cat:'aluminum',n:'2.25 Lb Aluminum Pan (TN-788)',d:'500pcs/case',img:'foil'},
-  {id:'al12',cat:'aluminum',n:'768 Pan',d:'Case pricing',img:'foil'},
-  {id:'al13',cat:'aluminum',n:'Half Size Aluminum Pan Lid',d:'100pcs/case',img:'foil'},
-  {id:'al14',cat:'aluminum',n:'Half Medium Aluminum Pan w/Lid',d:'Case pricing',img:'foil'},
-  {id:'al15',cat:'aluminum',n:'Full Medium Steam Table Pan w/Lid',d:'Case pricing',img:'foil'},
-  {id:'al16',cat:'aluminum',n:'Full Size Deep Pan w/Lid',d:'Case pricing',img:'foil'},
-  {id:'al17',cat:'aluminum',n:'Aluminum Foil 12"x1000',d:'Standard roll',img:'foil'},
-  {id:'al18',cat:'aluminum',n:'Aluminum Foil 12"x1000 Blue',d:'Blue label roll',img:'foil'},
-  {id:'al19',cat:'aluminum',n:'Aluminum Foil 18"x500',d:'Wide roll',img:'foil'},
-  {id:'al20',cat:'aluminum',n:'Aluminum Sheet 12x10-3/4"',d:'Pre-cut sheets',img:'foil'},
-  {id:'al21',cat:'aluminum',n:'Foil Sheet',d:'Case pricing',img:'foil'},
-  {id:'co01',cat:'containers',n:'FH-878B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co02',cat:'containers',n:'FH-12B 12oz Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co03',cat:'containers',n:'FH-718B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co04',cat:'containers',n:'FH-723B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co05',cat:'containers',n:'FH-729B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co06',cat:'containers',n:'FH-124B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co07',cat:'containers',n:'FH-132B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co08',cat:'containers',n:'FH-868B Black Container',d:'150pcs/case',img:'plastic'},
-  {id:'co09',cat:'containers',n:'FH-723W White Container',d:'150pcs/case',img:'plastic'},
-  {id:'co10',cat:'containers',n:'FH-138W White Container',d:'150pcs/case',img:'plastic'},
-  {id:'co11',cat:'containers',n:'FH-130 Container',d:'Case pricing',img:'plastic'},
-  {id:'co12',cat:'containers',n:'PP206 White Container',d:'150pcs/case',img:'plastic'},
-  {id:'co13',cat:'containers',n:'PP93 White Container',d:'150pcs/case',img:'plastic'},
-  {id:'co14',cat:'containers',n:'PP661/225 Container',d:'250pcs/case',img:'plastic'},
-  {id:'co15',cat:'containers',n:'C57 Container',d:'Case pricing',img:'plastic'},
-  {id:'co16',cat:'containers',n:'C90 Container',d:'250pcs/case',img:'plastic'},
-  {id:'co17',cat:'containers',n:'CY-888 38oz Rectangular Food Container',d:'Case pricing',img:'plastic'},
-  {id:'co18',cat:'containers',n:'TN CY-9818 12oz Food Container',d:'150pcs/case',img:'plastic'},
-  {id:'co19',cat:'containers',n:'TN-8024 24oz Food Container',d:'150pcs/case',img:'plastic'},
-  {id:'co20',cat:'containers',n:'Item #803',d:'Case pricing - call for details',img:'plastic'},
-  {id:'fb01',cat:'foodboxes',n:'ECKO #1 Food Box',d:'Small folded paper box - case pricing',img:'paper'},
-  {id:'fb02',cat:'foodboxes',n:'ECKO #3 Food Box',d:'Large folded paper box - case pricing',img:'paper'},
-  {id:'fb03',cat:'foodboxes',n:'ECKO #8 Food Box',d:'Medium folded paper box - case pricing',img:'paper'},
-  {id:'ds01',cat:'deli',n:'UNICUP 12oz Deli Soup Container',d:'240pcs/case',img:'plastic'},
-  {id:'ds02',cat:'deli',n:'UNICUP 24oz Deli Soup Container',d:'240pcs/case',img:'plastic'},
-  {id:'ds03',cat:'deli',n:'UNICUP 32oz Deli Soup Container',d:'240pcs/case',img:'plastic'},
-  {id:'ds04',cat:'deli',n:'8oz Clear Deli Container',d:'Case pricing',img:'plastic'},
-  {id:'ds05',cat:'deli',n:'16oz Deli Container',d:'Case pricing',img:'plastic'},
-  {id:'ds06',cat:'deli',n:'12oz Soup Container',d:'Case pricing',img:'plastic'},
-  {id:'ds07',cat:'deli',n:'24oz Soup Container',d:'Case pricing',img:'plastic'},
-  {id:'ds08',cat:'deli',n:'Twin Deli Container Lids',d:'Case pricing',img:'plastic'},
-  {id:'ds09',cat:'deli',n:'H53 Clear Hinged Container',d:'Case pricing',img:'plastic'},
-  {id:'ds10',cat:'deli',n:'6x9" Sugarcane Hinged Clam HC96',d:'Case pricing - compostable',img:'fiber'},
-  {id:'ds11',cat:'deli',n:'12oz Hinged Deli Container',d:'Case pricing',img:'plastic'},
-  {id:'ds12',cat:'deli',n:'24oz Hinged Deli Container',d:'Case pricing',img:'plastic'},
-  {id:'ds13',cat:'deli',n:'32oz Hinged Deli Container',d:'Case pricing',img:'plastic'},
-  {id:'cu01',cat:'cups',n:'KC-001SC 1oz Portion Cup',d:'Case pricing',img:'plastic'},
-  {id:'cu02',cat:'cups',n:'KC-001SC 0.75/1oz Cup Lid',d:'Case pricing',img:'plastic'},
-  {id:'cu03',cat:'cups',n:'8oz Paper Cup',d:'Case pricing',img:'paper'},
-  {id:'cu04',cat:'cups',n:'8oz Paper Cup Lid',d:'1000pcs/case',img:'paper'},
-  {id:'cu05',cat:'cups',n:'DK 10oz Hot Coffee Cup',d:'Case pricing',img:'paper'},
-  {id:'cu06',cat:'cups',n:'DK 16oz Hot Coffee Cup',d:'Case pricing',img:'paper'},
-  {id:'cu07',cat:'cups',n:'DK White Flat Tear Back Lid',d:'For hot coffee cups - case pricing',img:'paper'},
-  {id:'cu08',cat:'cups',n:'DK 12/14oz Clear Cup',d:'Case pricing',img:'plastic'},
-  {id:'cu09',cat:'cups',n:'DK 16oz Clear Lid',d:'Case pricing',img:'plastic'},
-  {id:'cu10',cat:'cups',n:'8oz SPT Container',d:'Case pricing',img:'plastic'},
-  {id:'cu11',cat:'cups',n:'16oz SPT Container',d:'Case pricing',img:'plastic'},
-  {id:'cu12',cat:'cups',n:'32oz SQT Container',d:'Case pricing',img:'plastic'},
-  {id:'cu13',cat:'cups',n:'32oz Plastic Cup',d:'500/case',img:'plastic'},
-  {id:'cu14',cat:'cups',n:'32oz Plastic Cup Flat Lids',d:'500/case',img:'plastic'},
-  {id:'cu15',cat:'cups',n:'10-24oz PET Cup Dome Lids',d:'1000/case',img:'plastic'},
-  {id:'cu16',cat:'cups',n:'Bubble Tea Straws',d:'Case pricing',img:null},
-  {id:'pt01',cat:'plates',n:'6" Paper Plate',d:'Case pricing',img:'paper'},
-  {id:'pt02',cat:'plates',n:'7" Paper Plate',d:'1000pcs/case',img:'paper'},
-  {id:'pt03',cat:'plates',n:'9" Paper Plate',d:'Case pricing',img:'paper'},
-  {id:'pt04',cat:'plates',n:'12" Black Catering Tray',d:'Case pricing',img:'plastic'},
-  {id:'pt05',cat:'plates',n:'12" Dome Lid',d:'Case pricing',img:'plastic'},
-  {id:'pt06',cat:'plates',n:'CKF 10P White Foam Tray',d:'Case pricing',img:null},
-  {id:'pt07',cat:'plates',n:'CKF 3PP White Foam',d:'Case pricing',img:null},
-  {id:'bg01',cat:'bags',n:'HF-1/6 Clear Happy Face Bag',d:'Case pricing',img:'paper'},
-  {id:'bg02',cat:'bags',n:'HF-1/8 Clear Happy Face Bag',d:'Case pricing',img:'paper'},
-  {id:'bg03',cat:'bags',n:'1/6 Flower Shopping Bag',d:'Case pricing',img:'paper'},
-  {id:'bg04',cat:'bags',n:'1/8 Flower Bag',d:'Case pricing',img:'paper'},
-  {id:'bg05',cat:'bags',n:'#6 Paper Bag',d:'Case pricing',img:'paper'},
-  {id:'bg06',cat:'bags',n:'Paper Bag No.8',d:'Case pricing',img:'paper'},
-  {id:'bg07',cat:'bags',n:'10x7x12 Paper Bag',d:'Case pricing',img:'paper'},
-  {id:'bg08',cat:'bags',n:'12x7x12 Flat Handle Paper Bag',d:'Case pricing',img:'paper'},
-  {id:'bg09',cat:'bags',n:'12x7x14 Handle Paper Bag',d:'200/case',img:'paper'},
-  {id:'bg10',cat:'bags',n:'Paper Bag w/Handle Small SS 8x4x10',d:'Case pricing',img:'paper'},
-  {id:'bg11',cat:'bags',n:'Paper Bag w/Handle Medium SS 10x5x13',d:'Case pricing',img:'paper'},
-  {id:'bg12',cat:'bags',n:'Paper Bag w/Handle Large SS 13x7x17',d:'Case pricing',img:'paper'},
-  {id:'bg13',cat:'bags',n:'UNICUP Small Brown Handle Bag 10x5x13',d:'250pcs/case',img:'paper'},
-  {id:'bg14',cat:'bags',n:'10x8x24 Heavy Duty Bag',d:'Case pricing',img:'paper'},
-  {id:'bg15',cat:'bags',n:'15x20 Roll Bag',d:'Case pricing',img:null},
-  {id:'bg16',cat:'bags',n:'18" Film Roll',d:'Case pricing',img:null},
-  {id:'bg17',cat:'bags',n:'2/20 Roll Bag',d:'2mil 20" - case pricing',img:null},
-  {id:'bg18',cat:'bags',n:'Glassine Bags',d:'Case pricing',img:null},
-  {id:'ct01',cat:'cutlery',n:'JWS-4000 Wooden Chopstick',d:'Case pricing',img:null},
-  {id:'ct02',cat:'cutlery',n:'FH-Bamboo Chopstick',d:'Case pricing',img:null},
-  {id:'ct03',cat:'cutlery',n:'Salad Spoon Clear 9"',d:'Case pricing',img:null},
-  {id:'ct04',cat:'cutlery',n:'Heavy Duty Fork Black',d:'Case pricing',img:null},
-  {id:'ct05',cat:'cutlery',n:'White Knife Unwrapped',d:'1000pcs/case',img:null},
-  {id:'ct06',cat:'cutlery',n:'Spoon No Wrap',d:'Case pricing',img:null},
-  {id:'ct07',cat:'cutlery',n:'Spoon Wrapped',d:'Case pricing',img:null},
-  {id:'np01',cat:'napkins',n:'C-FOLD Napkin',d:'Case pricing',img:null},
-  {id:'np02',cat:'napkins',n:'DN-128 Dinner Napkin',d:'Case pricing',img:null},
-  {id:'np03',cat:'napkins',n:'White Multi-Fold Towel',d:'Case pricing',img:null},
-  {id:'np04',cat:'napkins',n:'Tissue 2-Ply',d:'Case pricing',img:null},
-  {id:'np05',cat:'napkins',n:'SILKIE548 Soft Bath Tissue',d:'Case pricing',img:null},
-  {id:'np06',cat:'napkins',n:'Eazy10 Wax Paper',d:'Case pricing',img:null},
-  {id:'np07',cat:'napkins',n:'Heavy Duty No Wrap',d:'Case pricing',img:null},
-  {id:'pp01',cat:'ppe',n:'Nitrile Gloves Blue — S',d:'Case pricing',img:'ppe',a:true},
-  {id:'pp02',cat:'ppe',n:'Nitrile Gloves Blue — M',d:'Case pricing',img:'ppe',a:true},
-  {id:'pp03',cat:'ppe',n:'Nitrile Gloves Blue — L',d:'Case pricing',img:'ppe'},
-  {id:'pp04',cat:'ppe',n:'Nitrile Gloves Blue — XL',d:'Case pricing',img:'ppe',a:true},
-  {id:'pp05',cat:'ppe',n:'Black Nitrile Gloves Powder Free — S',d:'Case pricing',img:'ppe',a:true},
-  {id:'pp06',cat:'ppe',n:'Black Nitrile Gloves Powder Free — M',d:'Case pricing',img:'ppe',a:true},
-  {id:'pp07',cat:'ppe',n:'Black Nitrile Gloves Powder Free — L',d:'Case pricing',img:'ppe'},
-  {id:'pp08',cat:'ppe',n:'Black Nitrile Gloves Powder Free — XL',d:'Case pricing',img:'ppe'},
-  {id:'cl01',cat:'cleaning',n:'Mop Head',d:'Case pricing',img:null},
-  {id:'cl02',cat:'cleaning',n:'TK Black Mop Head',d:'Case pricing',img:null}
+// ── Products ──────────────────────────────────────────────────────────────
+var P = [
+  // PANS & FOIL
+  {id:'pa01',cat:'pans',sub:'Round Aluminum Pans',n:'7" Aluminum Round Pan',d:'Disposable round aluminum pan',img:'foil'},
+  {id:'pa02',cat:'pans',sub:'Round Aluminum Pans',n:'7" Foil Laminated Board Lid',d:'500/case',img:'foil'},
+  {id:'pa03',cat:'pans',sub:'Round Aluminum Pans',n:'8" Aluminum Round Pan',d:'Disposable round aluminum pan',img:'foil'},
+  {id:'pa04',cat:'pans',sub:'Round Aluminum Pans',n:'8" Aluminum Round Pan Lid',d:'500/case',img:'foil'},
+  {id:'pa05',cat:'pans',sub:'Round Aluminum Pans',n:'9" Aluminum Round Pan',d:'Disposable round aluminum pan',img:'foil'},
+  {id:'pa06',cat:'pans',sub:'Round Aluminum Pans',n:'9" Aluminum Pan Plastic Lids',d:'Plastic lids for 9" round pan',img:'foil'},
+  {id:'pa07',cat:'pans',sub:'Rectangular Aluminum Pans',n:'1 Lb Aluminum Rectangular Pan — 705',d:'TN brand · 705 series',img:'foil'},
+  {id:'pa08',cat:'pans',sub:'Rectangular Aluminum Pans',n:'1 Lb Aluminum Pan Plastic Lids — 705',d:'Plastic lids for 705 pan',img:'foil'},
+  {id:'pa09',cat:'pans',sub:'Rectangular Aluminum Pans',n:'1.5 Lb Aluminum Rectangular Pan',d:'TN brand · 500/case',img:'foil'},
+  {id:'pa10',cat:'pans',sub:'Rectangular Aluminum Pans',n:'1.5 Lb Aluminum Pan Plastic Lids — 747',d:'500/case',img:'foil'},
+  {id:'pa11',cat:'pans',sub:'Rectangular Aluminum Pans',n:'2.25 Lb Aluminum Pan — 788',d:'TN brand · 500/case',img:'foil'},
+  {id:'pa12',cat:'pans',sub:'Steam Table Pans',n:'768 Pan',d:'768 series foil pan',img:'foil'},
+  {id:'pa13',cat:'pans',sub:'Steam Table Pans',n:'768 Pan Lid',d:'Lid for 768 pan',img:'foil'},
+  {id:'pa14',cat:'pans',sub:'Steam Table Pans',n:'768 Pan and Lid Set',d:'Pan + lid bundled',img:'foil'},
+  {id:'pa15',cat:'pans',sub:'Steam Table Pans',n:'Half Size Aluminum Pan Lid',d:'100/case',img:'foil'},
+  {id:'pa16',cat:'pans',sub:'Steam Table Pans',n:'Half Medium Aluminum Pan w/Lid',d:'Pan + lid set',img:'foil'},
+  {id:'pa17',cat:'pans',sub:'Steam Table Pans',n:'Full Medium Steam Table Pan w/Lid',d:'Full steam table set',img:'foil'},
+  {id:'pa18',cat:'pans',sub:'Steam Table Pans',n:'Full Size Deep Pan w/Lid',d:'Deep full size pan + lid',img:'foil'},
+  {id:'pa19',cat:'pans',sub:'Foil Rolls',n:'Aluminum Foil 12"x1000',d:'Standard 12" wide roll',img:'foil'},
+  {id:'pa20',cat:'pans',sub:'Foil Rolls',n:'Aluminum Foil 12"x1000 (Blue)',d:'Blue heavy-duty 12" roll',img:'foil'},
+  {id:'pa21',cat:'pans',sub:'Foil Rolls',n:'Aluminum Foil 18"x500',d:'Wide 18" roll · 500ft',img:'foil'},
+  {id:'pa22',cat:'pans',sub:'Foil Sheets & Film',n:'Aluminum Sheet 12"x10.75"',d:'Pre-cut flat foil sheets',img:'foil'},
+  {id:'pa23',cat:'pans',sub:'Foil Sheets & Film',n:'Foil Sheet',d:'Standard pre-cut foil sheet',img:'foil'},
+  {id:'pa24',cat:'pans',sub:'Foil Sheets & Film',n:'18" Film',d:'18" plastic cling film roll',img:null},
+  {id:'pa25',cat:'pans',sub:'Foil Sheets & Film',n:'2/20 Roll Bag',d:'Roll bag · 2x20 size',img:null},
+  {id:'pa26',cat:'pans',sub:'Foil Sheets & Film',n:'Eazy10 Wax Paper',d:'Wax-coated deli paper sheets',img:null},
+  {id:'pa27',cat:'pans',sub:'Foil Sheets & Film',n:'Heavy Duty No Wrap',d:'Heavy duty stretch wrap roll',img:null},
+  {id:'pa28',cat:'pans',sub:'Foil Sheets & Film',n:'Glassine Bags',d:'Translucent wax paper bags',img:null},
+  // CONTAINERS
+  {id:'co01',cat:'containers',sub:'Hinged Containers',n:'H53 Clear Hinged Container',d:'Clear plastic hinged clamshell',img:'plastic'},
+  {id:'co02',cat:'containers',sub:'Hinged Containers',n:'12oz Hinged Deli Container',d:'Clear hinged · 12oz',img:'plastic'},
+  {id:'co03',cat:'containers',sub:'Hinged Containers',n:'24oz Hinged Deli Container',d:'Clear hinged · 24oz',img:'plastic'},
+  {id:'co04',cat:'containers',sub:'Hinged Containers',n:'32oz Hinged Deli Container',d:'Clear hinged · 32oz',img:'plastic'},
+  {id:'co05',cat:'containers',sub:'Hinged Containers',n:'6x9" Sugarcane Hinged Clam HC96',d:'Compostable · 6"x9"',img:'fiber'},
+  {id:'co06',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-878B',d:'Black rectangular container · 150/case',img:'plastic'},
+  {id:'co07',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-12B · 12oz',d:'12oz black container · 150/case',img:'plastic'},
+  {id:'co08',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-723B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co09',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-729B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co10',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-124B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co11',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-868B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co12',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-132B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co13',cat:'containers',sub:'FH Black Containers (150/case)',n:'FH-718B',d:'Black container · 150/case',img:'plastic'},
+  {id:'co14',cat:'containers',sub:'Other Black Containers',n:'CY 888 · 38oz Rectangular',d:'38oz black rectangular container',img:'plastic'},
+  {id:'co15',cat:'containers',sub:'Other Black Containers',n:'TN-8024 · 24oz Food Container',d:'150/case',img:'plastic'},
+  {id:'co16',cat:'containers',sub:'FH White Containers (150/case)',n:'FH-723W',d:'White container · 150/case',img:'plastic'},
+  {id:'co17',cat:'containers',sub:'FH White Containers (150/case)',n:'FH-138W',d:'White container · 150/case',img:'plastic'},
+  {id:'co18',cat:'containers',sub:'PP & C Series',n:'PP206 White',d:'PP white container · 150/case',img:'plastic'},
+  {id:'co19',cat:'containers',sub:'PP & C Series',n:'PP661/225',d:'PP container · 250/case',img:'plastic'},
+  {id:'co20',cat:'containers',sub:'PP & C Series',n:'PP93 White',d:'PP white container · 150/case',img:'plastic'},
+  {id:'co21',cat:'containers',sub:'PP & C Series',n:'C57',d:'Clear/white food container',img:'plastic'},
+  {id:'co22',cat:'containers',sub:'PP & C Series',n:'C90',d:'Food container · 250/case',img:'plastic'},
+  {id:'co23',cat:'containers',sub:'PP & C Series',n:'TN CY-9818 · 12oz',d:'12oz food container · 150/case',img:'plastic'},
+  {id:'co24',cat:'containers',sub:'PP & C Series',n:'FH-130',d:'FH series food container',img:'plastic'},
+  {id:'co25',cat:'containers',sub:'PP & C Series',n:'803',d:'Food container',img:'plastic'},
+  // DELI & SOUP
+  {id:'de01',cat:'deli',sub:'UNICUP Deli Soup (240/case)',n:'UNICUP 12oz Deli Soup Container',d:'240/case',img:'plastic'},
+  {id:'de02',cat:'deli',sub:'UNICUP Deli Soup (240/case)',n:'UNICUP 24oz Deli Soup Container',d:'240/case',img:'plastic'},
+  {id:'de03',cat:'deli',sub:'UNICUP Deli Soup (240/case)',n:'UNICUP 32oz Deli Soup Container',d:'240/case',img:'plastic'},
+  {id:'de04',cat:'deli',sub:'SPT / SQT Soup Cups',n:'8oz SPT Soup Container',d:'Gourmet paper soup cup · 8oz',img:'paper'},
+  {id:'de05',cat:'deli',sub:'SPT / SQT Soup Cups',n:'16oz SPT Soup Container',d:'Gourmet paper soup cup · 16oz',img:'paper'},
+  {id:'de06',cat:'deli',sub:'SPT / SQT Soup Cups',n:'32oz SQT Soup Container',d:'Square paper soup cup · 32oz',img:'paper'},
+  {id:'de07',cat:'deli',sub:'Soup Containers',n:'12oz Soup Container',d:'Standard soup container',img:'plastic'},
+  {id:'de08',cat:'deli',sub:'Soup Containers',n:'24oz Soup Container',d:'Standard soup container',img:'plastic'},
+  {id:'de09',cat:'deli',sub:'Clear Deli Containers',n:'8oz Clear Deli Container',d:'Clear PP deli container',img:'plastic'},
+  {id:'de10',cat:'deli',sub:'Clear Deli Containers',n:'16oz Deli Container',d:'Clear PP deli container',img:'plastic'},
+  {id:'de11',cat:'deli',sub:'Clear Deli Containers',n:'Twin Deli Container Lids',d:'Lids for twin deli containers',img:null},
+  // CUPS & PLATES
+  {id:'cu01',cat:'cups',sub:'Plastic Cups & Lids',n:'32oz Plastic Cup',d:'500/case',img:'plastic'},
+  {id:'cu02',cat:'cups',sub:'Plastic Cups & Lids',n:'32oz Plastic Cup Flat Lids',d:'500/case',img:null},
+  {id:'cu03',cat:'cups',sub:'Plastic Cups & Lids',n:'DK 12/14oz Clear Cup',d:'Clear plastic cup',img:'plastic'},
+  {id:'cu04',cat:'cups',sub:'Plastic Cups & Lids',n:'DK 16oz Clear Lid',d:'Lid for DK clear cups',img:null},
+  {id:'cu05',cat:'cups',sub:'Plastic Cups & Lids',n:'10-24oz PET Cup Dome Lids',d:'1000/case',img:null},
+  {id:'cu06',cat:'cups',sub:'Portion Cups',n:'KC-001SC 1oz Cup',d:'Portion / souffle cup',img:'plastic'},
+  {id:'cu07',cat:'cups',sub:'Portion Cups',n:'KC-001SC 0.75/1oz Cup Lid',d:'Lid for portion cup',img:null},
+  {id:'cu08',cat:'cups',sub:'Bubble Tea',n:'Bubble Tea Straws',d:'Wide bore boba straws',img:null},
+  {id:'cu09',cat:'cups',sub:'Paper Cups',n:'8oz Paper Cup',d:'White disposable paper cup',img:'paper'},
+  {id:'cu10',cat:'cups',sub:'Paper Cups',n:'8oz Paper Cup Lid',d:'1000/case',img:null},
+  {id:'cu11',cat:'cups',sub:'Hot Coffee Cups',n:'DK 10oz Hot Coffee Cup',d:'Double wall paper coffee cup',img:'paper'},
+  {id:'cu12',cat:'cups',sub:'Hot Coffee Cups',n:'DK 16oz Hot Coffee Cup',d:'Double wall paper coffee cup',img:'paper'},
+  {id:'cu13',cat:'cups',sub:'Hot Coffee Cups',n:'DK White Flat Tear Back Lid',d:'Hot coffee cup lid',img:null},
+  {id:'cu14',cat:'cups',sub:'Paper Plates',n:'6" Paper Plate',d:'Disposable paper plate',img:'paper'},
+  {id:'cu15',cat:'cups',sub:'Paper Plates',n:'7" Paper Plate',d:'1000/case',img:'paper'},
+  {id:'cu16',cat:'cups',sub:'Paper Plates',n:'9" Paper Plate',d:'Disposable paper plate',img:'paper'},
+  {id:'cu17',cat:'cups',sub:'Chinese Food Boxes',n:'ECKO #1 Food Box',d:'Chinese takeout box · #1 size',img:'paper'},
+  {id:'cu18',cat:'cups',sub:'Chinese Food Boxes',n:'ECKO #3 Food Box',d:'Chinese takeout box · #3 size',img:'paper'},
+  {id:'cu19',cat:'cups',sub:'Chinese Food Boxes',n:'ECKO #8 Food Box',d:'Chinese takeout box · #8 size',img:'paper'},
+  // BAGS
+  {id:'bg01',cat:'bags',sub:'Shopping Bags',n:'HF-1/6 Clear Happy Face Bag',d:'1/6 size clear shopping bag',img:null},
+  {id:'bg02',cat:'bags',sub:'Shopping Bags',n:'HF-1/8 Clear Happy Face Bag',d:'1/8 size clear shopping bag',img:null},
+  {id:'bg03',cat:'bags',sub:'Shopping Bags',n:'1/6 Flower Shopping Bag',d:'1/6 size flower print bag',img:null},
+  {id:'bg04',cat:'bags',sub:'Shopping Bags',n:'1/8 Flower Bag',d:'1/8 size flower print bag',img:null},
+  {id:'bg05',cat:'bags',sub:'Paper Bags',n:'Paper Bag #6',d:'#6 flat paper bag',img:null},
+  {id:'bg06',cat:'bags',sub:'Paper Bags',n:'Paper Bag #8',d:'#8 flat paper bag',img:null},
+  {id:'bg07',cat:'bags',sub:'Paper Bags',n:'Paper Bag 10x7x12',d:'10"x7"x12"',img:null},
+  {id:'bg08',cat:'bags',sub:'Paper Bags with Handle',n:'Handle Bag Small — 8x4x10',d:'SS small · 8"x4"x10"',img:null},
+  {id:'bg09',cat:'bags',sub:'Paper Bags with Handle',n:'Handle Bag Medium — 10x5x13',d:'SS medium · 10"x5"x13"',img:null},
+  {id:'bg10',cat:'bags',sub:'Paper Bags with Handle',n:'Handle Bag Large — 13x7x17',d:'SS large · 13"x7"x17"',img:null},
+  {id:'bg11',cat:'bags',sub:'Paper Bags with Handle',n:'UNICUP Brown Handle Bag 10x5x13',d:'250/case',img:null},
+  {id:'bg12',cat:'bags',sub:'Paper Bags with Handle',n:'Handle Paper Bag 12x7x14',d:'200/case',img:null},
+  {id:'bg13',cat:'bags',sub:'Paper Bags with Handle',n:'Flat Handle Paper Bag 12x7x12',d:'Flat handle style',img:null},
+  {id:'bg14',cat:'bags',sub:'Plastic Bags',n:'10x8x24 Heavy Duty Bag',d:'Large heavy duty plastic bag',img:null},
+  {id:'bg15',cat:'bags',sub:'Plastic Bags',n:'15x20 Roll Bag',d:'Roll bag · 15"x20"',img:null},
+  // PAPER & CUTLERY
+  {id:'ot01',cat:'other',sub:'Napkins',n:'C-FOLD Napkin',d:'Standard C-fold napkins',img:null},
+  {id:'ot02',cat:'other',sub:'Napkins',n:'DN-128 Dinner Napkin',d:'Dinner napkins',img:null},
+  {id:'ot03',cat:'other',sub:'Paper Towels & Tissue',n:'White Multi Fold Towel',d:'Multi-fold paper hand towels',img:null},
+  {id:'ot04',cat:'other',sub:'Paper Towels & Tissue',n:'Tissue 2-Ply',d:'2-ply tissue',img:null},
+  {id:'ot05',cat:'other',sub:'Paper Towels & Tissue',n:'SILKIE548 Soft Bath Tissue',d:'SILKIE brand soft 2-ply',img:null},
+  {id:'ot06',cat:'other',sub:'Chopsticks',n:'JWS-4000 Wooden Chopstick',d:'Disposable wooden chopsticks',img:null},
+  {id:'ot07',cat:'other',sub:'Chopsticks',n:'FH Bamboo Chopstick',d:'Eco bamboo chopsticks',img:null},
+  {id:'ot08',cat:'other',sub:'Cutlery',n:'Salad Spoon Clear 9"',d:'Clear plastic serving spoon',img:null},
+  {id:'ot09',cat:'other',sub:'Cutlery',n:'Spoon — No Wrap',d:'Disposable spoon · unwrapped bulk',img:null},
+  {id:'ot10',cat:'other',sub:'Cutlery',n:'Spoon — Wrapped',d:'Individually wrapped spoon',img:null},
+  {id:'ot11',cat:'other',sub:'Cutlery',n:'Heavy Duty Fork Black',d:'Heavy duty black plastic fork',img:null},
+  {id:'ot12',cat:'other',sub:'Cutlery',n:'White Knife Unwrapped',d:'1000/case',img:null},
+  {id:'ot13',cat:'other',sub:'Foam Trays',n:'CKF 10P White Foam Tray',d:'Foam meat/produce tray · 10P · 2/150/case',img:null},
+  {id:'ot14',cat:'other',sub:'Foam Trays',n:'CKF 3PP White Foam Tray',d:'Foam meat/produce tray · 3PP',img:null},
+  {id:'ot15',cat:'other',sub:'Catering Trays',n:'12" Black Catering Tray',d:'Black disposable catering tray',img:null},
+  {id:'ot16',cat:'other',sub:'Catering Trays',n:'12" Dome Lid',d:'Clear dome lid for 12" tray',img:null},
+  {id:'ot17',cat:'other',sub:'Catering Trays',n:'TK Black MH',d:'TK brand product',img:null},
+  // PPE & CLEANING
+  {id:'pp01',cat:'ppe',sub:'Blue Nitrile Gloves',n:'Blue Nitrile Gloves (S)',d:'Small · powder free',img:'ppe'},
+  {id:'pp02',cat:'ppe',sub:'Blue Nitrile Gloves',n:'Blue Nitrile Gloves (M)',d:'Medium · powder free',img:'ppe'},
+  {id:'pp03',cat:'ppe',sub:'Blue Nitrile Gloves',n:'Blue Nitrile Gloves (L)',d:'Large · powder free',img:'ppe'},
+  {id:'pp04',cat:'ppe',sub:'Blue Nitrile Gloves',n:'Blue Nitrile Gloves (XL)',d:'X-Large · powder free',img:'ppe'},
+  {id:'pp05',cat:'ppe',sub:'Black Nitrile Gloves (Powder Free)',n:'Black Nitrile Gloves (S)',d:'Small · powder free',img:'ppe'},
+  {id:'pp06',cat:'ppe',sub:'Black Nitrile Gloves (Powder Free)',n:'Black Nitrile Gloves (M)',d:'Medium · powder free',img:'ppe'},
+  {id:'pp07',cat:'ppe',sub:'Black Nitrile Gloves (Powder Free)',n:'Black Nitrile Gloves (L)',d:'Large · powder free',img:'ppe'},
+  {id:'pp08',cat:'ppe',sub:'Black Nitrile Gloves (Powder Free)',n:'Black Nitrile Gloves (XL)',d:'X-Large · powder free',img:'ppe'},
+  {id:'pp09',cat:'ppe',sub:'Cleaning',n:'Mop Head',d:'Replacement mop head',img:null}
 ];
 
-const qtys = {};
-let activeCat = 'all';
+// ── State ─────────────────────────────────────────────────────────────────
+var qtys   = {};
+var prices = {};
+var activeCat = 'all';
 
-const tabsEl = document.getElementById('catTabs');
-CATS.forEach(c => {
-  const b = document.createElement('button');
-  b.className = 'cat-tab' + (c.id === 'all' ? ' active' : '');
-  b.textContent = (c.id !== 'all' && ICONS[c.id] ? ICONS[c.id] + ' ' : '') + c.label;
-  b.dataset.cat = c.id;
-  b.onclick = () => switchCat(c.id);
-  tabsEl.appendChild(b);
-});
+// Load saved prices
+try { prices = JSON.parse(localStorage.getItem('jct_prices') || '{}'); } catch(e){}
 
-function buildList() {
-  const el = document.getElementById('prodList');
-  const groups = {};
-  P.forEach(p => { if (!groups[p.cat]) groups[p.cat] = []; groups[p.cat].push(p); });
-  let html = '';
-  CATS.filter(c => c.id !== 'all').forEach(c => {
-    const items = groups[c.id] || [];
-    if (!items.length) return;
-    html += '<div class="cat-section" data-cat="' + c.id + '">';
-    html += '<div class="cat-label">' + (ICONS[c.id]||'') + ' ' + c.label + ' <span style="font-weight:400">(' + items.length + ')</span></div>';
-    items.forEach(p => {
-      const imgEl = p.img
-        ? '<img class="prod-img" src="' + IMGS[p.img] + '" alt="" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="prod-placeholder" style="display:none">' + (ICONS[p.cat]||'📦') + '</div>'
-        : '<div class="prod-placeholder">' + (ICONS[p.cat]||'📦') + '</div>';
-      const aTag = p.a ? '<span class="added-tag">+ size added</span>' : '';
-      html += '<div class="product-row" data-id="' + p.id + '" data-cat="' + p.cat + '" data-name="' + p.n.toLowerCase() + '">'
-        + imgEl
-        + '<div><div class="prod-name">' + p.n + aTag + '</div><div class="prod-detail">' + p.d + '</div></div>'
-        + '<div class="price-wrap"><span class="price-pre">$</span><input type="number" class="price-inp" id="pi-' + p.id + '" placeholder="--" min="0" step="0.01" oninput="priceChange(\'' + p.id + '\',this)"><span class="price-suf">/cs</span></div>'
-        + '<div class="qty-wrap"><button class="qbtn" onclick="chgQty(\'' + p.id + '\',-1)">&#8722;</button><div class="qval" id="qv-' + p.id + '">0</div><button class="qbtn" onclick="chgQty(\'' + p.id + '\',1)">+</button></div>'
-        + '</div>';
-    });
-    html += '</div>';
+// ── Build tabs ─────────────────────────────────────────────────────────────
+function buildTabs() {
+  var bar = document.getElementById('tabBar');
+  bar.innerHTML = TABS.map(function(t) {
+    return '<button class="tab-btn' + (t.key === 'all' ? ' active' : '') + '" data-cat="' + t.key + '" onclick="switchCat(\'' + t.key + '\',this)">' + t.label + '</button>';
+  }).join('');
+}
+
+// ── Switch category tab ────────────────────────────────────────────────────
+function switchCat(cat, btn) {
+  activeCat = cat;
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('searchInput').value = '';
+  renderProducts();
+  // Nudge scroll after paint so first item clears the sticky header
+  requestAnimationFrame(function() {
+    var hdr = document.querySelector('.catalog-head');
+    var list = document.getElementById('prodList');
+    if (!hdr || !list) return;
+    var gap = list.getBoundingClientRect().top - hdr.getBoundingClientRect().bottom;
+    if (gap < 1) window.scrollTo(0, window.scrollY + gap - 2);
   });
-  el.innerHTML = html;
 }
 
-buildList();
+// ── Render products ────────────────────────────────────────────────────────
+function renderProducts() {
+  var q = document.getElementById('searchInput').value.toLowerCase().trim();
+  var filtered = P.filter(function(p) {
+    var catMatch = activeCat === 'all' || p.cat === activeCat;
+    var searchMatch = !q || p.n.toLowerCase().includes(q) || p.d.toLowerCase().includes(q);
+    return catMatch && searchMatch;
+  });
 
-function loadPrices() {
-  try {
-    const saved = JSON.parse(localStorage.getItem('jct_prices') || '{}');
-    Object.entries(saved).forEach(function(entry) {
-      const el = document.getElementById('pi-' + entry[0]);
-      if (el) { el.value = entry[1]; el.classList.add('set'); }
+  if (!filtered.length) {
+    document.getElementById('prodList').innerHTML = '<div class="no-results">No products found. Try a different search or tab.</div>';
+    return;
+  }
+
+  // Group by sub
+  var groups = {};
+  var order_arr = [];
+  filtered.forEach(function(p) {
+    if (!groups[p.sub]) { groups[p.sub] = []; order_arr.push(p.sub); }
+    groups[p.sub].push(p);
+  });
+
+  var html = '';
+  order_arr.filter(function(s,i) { return order_arr.indexOf(s) === i; }).forEach(function(sub) {
+    html += '<div class="section-label">' + sub + '</div>';
+    groups[sub].forEach(function(p) {
+      var qty = qtys[p.id] || 0;
+      var price = prices[p.id] || '';
+      var imgHtml = p.img
+        ? '<img class="prod-img" src="' + IMGS[p.img] + '" alt="" loading="lazy">'
+        : '<div class="prod-ph">' + (ICONS[p.cat] || '📦') + '</div>';
+      html += '<div class="prod-row" id="row-' + p.id + '">' +
+        imgHtml +
+        '<div><div class="prod-name">' + p.n + '</div><div class="prod-detail">' + p.d + '</div></div>' +
+        '<div class="price-wrap"><input class="price-inp' + (price ? ' set' : '') + '" id="pi-' + p.id + '" type="number" min="0" step="0.01" placeholder="0.00" value="' + price + '" oninput="savePrice(\'' + p.id + '\')" onchange="updateSummary()"></div>' +
+        '<div class="qty-ctrl">' +
+          '<button class="qty-btn" onclick="chgQty(\'' + p.id + '\',-1)">&#8722;</button>' +
+          '<div class="qty-num' + (qty ? ' on' : '') + '" id="qv-' + p.id + '">' + qty + '</div>' +
+          '<button class="qty-btn" onclick="chgQty(\'' + p.id + '\',1)">+</button>' +
+        '</div>' +
+      '</div>';
     });
-  } catch(e) {}
+  });
+  document.getElementById('prodList').innerHTML = html;
 }
 
-function priceChange(id, inp) {
-  const v = parseFloat(inp.value);
-  inp.classList.toggle('set', !isNaN(v) && v > 0);
-  try {
-    const saved = JSON.parse(localStorage.getItem('jct_prices') || '{}');
-    if (!isNaN(v) && v > 0) saved[id] = inp.value; else delete saved[id];
-    localStorage.setItem('jct_prices', JSON.stringify(saved));
-  } catch(e) {}
+// ── Save price to localStorage ─────────────────────────────────────────────
+function savePrice(id) {
+  var inp = document.getElementById('pi-' + id);
+  if (!inp) return;
+  var val = parseFloat(inp.value);
+  if (!isNaN(val) && val > 0) {
+    prices[id] = inp.value;
+    inp.classList.add('set');
+  } else {
+    delete prices[id];
+    inp.classList.remove('set');
+  }
+  try { localStorage.setItem('jct_prices', JSON.stringify(prices)); } catch(e){}
   updateSummary();
 }
 
-function clearPrices() {
-  if (!confirm('Clear all prices? Quantities and products will stay untouched.')) return;
-  document.querySelectorAll('.price-inp').forEach(function(el) { el.value = ''; el.classList.remove('set'); });
-  try { localStorage.removeItem('jct_prices'); } catch(e) {}
-  updateSummary();
-}
-
+// ── Change quantity ────────────────────────────────────────────────────────
 function chgQty(id, delta) {
   qtys[id] = Math.max(0, (qtys[id] || 0) + delta);
-  const el = document.getElementById('qv-' + id);
-  if (el) { el.textContent = qtys[id]; el.classList.toggle('on', qtys[id] > 0); }
+  var el = document.getElementById('qv-' + id);
+  if (el) { el.textContent = qtys[id]; el.className = 'qty-num' + (qtys[id] > 0 ? ' on' : ''); }
   updateSummary();
 }
 
+// ── Update summary sidebar ─────────────────────────────────────────────────
 function updateSummary() {
-  const ordered = P.filter(function(p) { return (qtys[p.id] || 0) > 0; });
-  const totalCases = ordered.reduce(function(s,p) { return s + qtys[p.id]; }, 0);
-  document.getElementById('sumBadge').textContent = totalCases;
-  const emptyEl = document.getElementById('sumEmpty');
-  const listEl = document.getElementById('sumList');
-  const totalsEl = document.getElementById('sumTotals');
-  const statusEl = document.getElementById('delStatus');
+  var ordered = P.filter(function(p) { return (qtys[p.id] || 0) > 0; });
+  var totalCases = ordered.reduce(function(s,p) { return s + qtys[p.id]; }, 0);
+  document.getElementById('badge').textContent = totalCases;
+
+  var empty = document.getElementById('summaryEmpty');
+  var items = document.getElementById('summaryItems');
+  var totalRow = document.getElementById('summaryTotal');
+  var note = document.getElementById('summaryNote');
+
   if (!ordered.length) {
-    emptyEl.style.display = 'block'; listEl.style.display = 'none';
-    totalsEl.style.display = 'none'; statusEl.className = 'del-status off'; return;
+    empty.style.display = 'block';
+    items.style.display = 'none';
+    totalRow.style.display = 'none';
+    note.style.display = 'none';
+    return;
   }
-  emptyEl.style.display = 'none'; listEl.style.display = 'block';
-  var allPriced = true, subtotal = 0;
-  listEl.innerHTML = ordered.map(function(p) {
+
+  empty.style.display = 'none';
+  items.style.display = 'block';
+  note.style.display = 'block';
+
+  var grandTotal = 0;
+  var allPriced = true;
+
+  items.innerHTML = ordered.map(function(p) {
     var qty = qtys[p.id];
     var inp = document.getElementById('pi-' + p.id);
-    var price = inp ? parseFloat(inp.value) : NaN;
-    var pstr = '—';
-    if (!isNaN(price) && price > 0) { subtotal += price * qty; pstr = '$' + (price * qty).toFixed(2); }
-    else allPriced = false;
-    return '<div class="sum-item"><div class="sum-item-l"><div class="sum-item-name" title="' + p.n + '">' + p.n + '</div><div class="sum-item-qty">' + qty + ' case' + (qty>1?'s':'') + '</div></div><div class="sum-item-price">' + pstr + '</div><button class="sum-remove" onclick="removeItem(\'' + p.id + '\')" title="Remove">&#215;</button></div>';
+    var price = inp ? parseFloat(inp.value) : (prices[p.id] ? parseFloat(prices[p.id]) : NaN);
+    var hasPrice = !isNaN(price) && price > 0;
+    if (hasPrice) { grandTotal += price * qty; } else { allPriced = false; }
+    var sub = hasPrice ? ' · $' + (price * qty).toFixed(2) : '';
+    return '<div class="summary-item">' +
+      '<div><div class="s-name">' + p.n + '</div><div class="s-qty">' + qty + ' case' + (qty > 1 ? 's' : '') + sub + '</div></div>' +
+      '<button class="s-remove" onclick="removeItem(\'' + p.id + '\')">&#215;</button>' +
+    '</div>';
   }).join('');
-  totalsEl.style.display = 'block';
-  if (allPriced && subtotal > 0) {
-    totalsEl.innerHTML = '<div class="sum-row bold"><span>Subtotal</span><span>$' + subtotal.toFixed(2) + '</span></div><div class="sum-hint">Final pricing confirmed at delivery</div>';
+
+  if (grandTotal > 0) {
+    totalRow.style.display = 'flex';
+    document.getElementById('totalAmt').textContent = '$' + grandTotal.toFixed(2) + (allPriced ? '' : '*');
+    note.textContent = allPriced
+      ? 'All items priced. Final amount confirmed at delivery.'
+      : '* Some items have no price entered. Total is partial.';
   } else {
-    totalsEl.innerHTML = '<div class="sum-row"><span>Cases ordered</span><span>' + totalCases + '</span></div><div class="sum-hint">Enter your agreed prices above to see subtotal</div>';
+    totalRow.style.display = 'none';
+    note.textContent = 'Enter your agreed prices to see the estimated total.';
   }
-  var qualifies = totalCases >= 15 || (allPriced && subtotal >= 400);
-  statusEl.className = qualifies ? 'del-status ok' : 'del-status warn';
-  statusEl.innerHTML = qualifies
-    ? '&#9989; <span><strong>Delivery available</strong> — order meets the minimum threshold.</span>'
-    : '&#9888;&#65039; <span><strong>Pickup may be required.</strong> Need $400+ value or 15+ cases for delivery.</span>';
 }
 
+// ── Remove item ────────────────────────────────────────────────────────────
 function removeItem(id) {
   qtys[id] = 0;
   var el = document.getElementById('qv-' + id);
-  if (el) { el.textContent = '0'; el.classList.remove('on'); }
+  if (el) { el.textContent = '0'; el.className = 'qty-num'; }
   updateSummary();
 }
 
-function switchCat(cat) {
-  activeCat = cat;
-  document.querySelectorAll('.cat-tab').forEach(function(b) { b.classList.toggle('active', b.dataset.cat === cat); });
-  document.getElementById('searchInput').value = '';
-  filterProds();
-  // After paint, nudge scroll so the first visible item clears the sticky header
-  requestAnimationFrame(function() {
-    var hdr = document.querySelector('.catalog-header');
-    var firstItem = document.querySelector('.cat-section:not(.hidden)');
-    if (!hdr || !firstItem) return;
-    var hdrBottom  = hdr.getBoundingClientRect().bottom;
-    var itemTop    = firstItem.getBoundingClientRect().top;
-    if (itemTop < hdrBottom + 1) {
-      window.scrollTo(0, Math.round(window.scrollY + itemTop - hdrBottom - 1));
-    }
-  });
-}
-
-function filterProds() {
-  var q = document.getElementById('searchInput').value.toLowerCase().trim();
-  var anyVis = false;
-  document.querySelectorAll('.cat-section').forEach(function(sec) {
-    var secVis = false;
-    sec.querySelectorAll('.product-row').forEach(function(row) {
-      var show = (activeCat === 'all' || row.dataset.cat === activeCat) && (!q || row.dataset.name.includes(q));
-      row.classList.toggle('hidden', !show);
-      if (show) secVis = true;
-    });
-    sec.classList.toggle('hidden', !secVis);
-    if (secVis) anyVis = true;
-  });
-  var nr = document.getElementById('noResults');
-  if (!anyVis) {
-    if (!nr) {
-      nr = document.createElement('div'); nr.id = 'noResults'; nr.className = 'no-results';
-      nr.innerHTML = '&#128269; No products found. Try a different search or <a href="tel:+13476366182" style="color:var(--accent);">call us</a> — we carry more than listed.';
-      document.getElementById('prodList').appendChild(nr);
-    }
-    nr.style.display = 'block';
-  } else if (nr) nr.style.display = 'none';
-}
-
-// ── EmailJS credentials — paste your 3 values below after setup ─────────────
-var EMAILJS_PUBLIC_KEY  = 'lQuI7HY0Dw2XEnDYS';   // Account → General → Public Key
-var EMAILJS_SERVICE_ID  = 'service_ztvxqfw';   // Email Services → your service ID
-var EMAILJS_TEMPLATE_ID = 'template_6bpywgu';  // Email Templates → your template ID
-// ─────────────────────────────────────────────────────────────────────────────
-
-emailjs.init(EMAILJS_PUBLIC_KEY);
-
+// ── Submit order via EmailJS ───────────────────────────────────────────────
 function submitOrder() {
   var name  = document.getElementById('fName').value.trim();
   var phone = document.getElementById('fPhone').value.trim();
@@ -601,6 +630,7 @@ function submitOrder() {
     alert('Please fill in your name, phone number, and email address.');
     return;
   }
+
   var ordered = P.filter(function(p) { return (qtys[p.id] || 0) > 0; });
   if (!ordered.length) {
     alert('Please add at least one product to your order.');
@@ -608,36 +638,31 @@ function submitOrder() {
   }
 
   var grandTotal = 0;
-  var allPriced = true;
-
   var orderLines = ordered.map(function(p, i) {
     var qty = qtys[p.id];
     var inp = document.getElementById('pi-' + p.id);
-    var price = inp ? parseFloat(inp.value) : NaN;
+    var price = inp ? parseFloat(inp.value) : (prices[p.id] ? parseFloat(prices[p.id]) : NaN);
     var hasPrice = !isNaN(price) && price > 0;
-    if (!hasPrice) { allPriced = false; } else { grandTotal += price * qty; }
-    var priceStr    = hasPrice ? '$' + price.toFixed(2)         : '\u2014';
-    var subtotalStr = hasPrice ? '$' + (price * qty).toFixed(2) : '\u2014';
+    if (hasPrice) grandTotal += price * qty;
+    var priceStr = hasPrice ? '$' + price.toFixed(2) : '\u2014';
+    var subStr   = hasPrice ? '$' + (price * qty).toFixed(2) : '\u2014';
     var bg = i % 2 === 0 ? '#ffffff' : '#f9fafb';
     return '<tr style="background:' + bg + ';border-bottom:1px solid #e5e7eb;">' +
       '<td style="padding:10px 14px;font-size:14px;color:#111318;">' + p.n + '</td>' +
       '<td style="padding:10px 14px;font-size:14px;font-weight:700;text-align:center;color:#1B6CA8;">' + qty + '</td>' +
       '<td style="padding:10px 14px;font-size:14px;text-align:right;color:#374151;">' + priceStr + '</td>' +
-      '<td style="padding:10px 14px;font-size:14px;font-weight:700;text-align:right;color:#111318;">' + subtotalStr + '</td>' +
-      '</tr>';
+      '<td style="padding:10px 14px;font-size:14px;font-weight:700;text-align:right;color:#111318;">' + subStr + '</td>' +
+    '</tr>';
   }).join('');
 
-  var totalCasesCount = ordered.reduce(function(s,p){ return s + qtys[p.id]; }, 0);
-  var unpricedCount = ordered.filter(function(p) {
-    var inp = document.getElementById('pi-' + p.id);
-    var price = inp ? parseFloat(inp.value) : NaN;
-    return isNaN(price) || price <= 0;
-  }).length;
-  var orderTotalStr = grandTotal > 0
-    ? '$' + grandTotal.toFixed(2) + (unpricedCount > 0 ? ' (partial — ' + unpricedCount + ' item' + (unpricedCount > 1 ? 's' : '') + ' without price)' : '')
-    : 'No prices entered';
+  var totalCases = ordered.reduce(function(s,p) { return s + qtys[p.id]; }, 0);
+  var totalStr   = grandTotal > 0 ? '$' + grandTotal.toFixed(2) : 'Prices not entered';
 
-  var params = {
+  var btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending\u2026';
+  btn.disabled = true;
+
+  emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
     customer_name : name,
     business_name : biz   || 'Not provided',
     phone         : phone,
@@ -645,67 +670,54 @@ function submitOrder() {
     address       : addr  || 'Not provided',
     notes         : notes || 'None',
     order_items   : orderLines,
-    item_count    : totalCasesCount,
-    order_total   : orderTotalStr
-  };
-
-  var btn = document.querySelector('.sub-btn');
-  btn.textContent = 'Sending\u2026';
-  btn.disabled = true;
-
-  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-    .then(function() {
-      document.getElementById('formView').style.display = 'none';
-      document.getElementById('successView').classList.add('on');
-    })
-    .catch(function(err) {
-      console.error('EmailJS error:', err);
-      alert('Something went wrong. Please call (347) 636-6182 or email jingchengtradinginc@gmail.com directly.');
-      btn.textContent = 'Submit Order Request';
-      btn.disabled = false;
-    });
+    item_count    : totalCases,
+    order_total   : totalStr
+  }).then(function() {
+    document.getElementById('formView').style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+  }).catch(function(err) {
+    console.error('EmailJS error:', err);
+    alert('Something went wrong sending your order. Please call (347) 636-6182 or email jingchengtradinginc@gmail.com directly.');
+    btn.textContent = 'Submit Order';
+    btn.disabled = false;
+  });
 }
 
+// ── Reset order ────────────────────────────────────────────────────────────
 function resetOrder() {
-  P.forEach(function(p) {
-    qtys[p.id] = 0;
-    var el = document.getElementById('qv-' + p.id);
-    if (el) { el.textContent = '0'; el.classList.remove('on'); }
-  });
+  Object.keys(qtys).forEach(function(id) { qtys[id] = 0; });
   updateSummary();
-  ['fName','fBiz','fPhone','fEmail','fAddr','fNotes'].forEach(function(id) {
-    var el = document.getElementById(id); if (el) el.value = '';
-  });
   document.getElementById('formView').style.display = 'block';
-  document.getElementById('successView').classList.remove('on');
+  document.getElementById('successView').style.display = 'none';
+  document.getElementById('submitBtn').textContent = 'Submit Order';
+  document.getElementById('submitBtn').disabled = false;
+  ['fName','fBiz','fPhone','fEmail','fAddr','fNotes'].forEach(function(id) {
+    document.getElementById(id).value = '';
+  });
+  renderProducts();
 }
 
-loadPrices();
-</script>
-<script>
-function toggleMobNav(){
-  var panel=document.getElementById('mobPanel');
-  var overlay=document.getElementById('mobOverlay');
-  var btn=document.getElementById('hamBtn');
-  var isOpen=panel.classList.contains('open');
-  panel.classList.toggle('open');
-  overlay.classList.toggle('open');
-  btn.classList.toggle('open');
-  document.body.style.overflow=isOpen?'':'hidden';
+// ── Search ────────────────────────────────────────────────────────────────
+function filterProds() { renderProducts(); }
+
+// ── Mobile nav ────────────────────────────────────────────────────────────
+function toggleMob() {
+  var open = document.getElementById('mobPanel').classList.contains('open');
+  document.getElementById('mobPanel').classList.toggle('open');
+  document.getElementById('mobOverlay').classList.toggle('open');
+  document.getElementById('hamBtn').classList.toggle('open');
+  document.body.style.overflow = open ? '' : 'hidden';
 }
-function closeMobNav(){
+function closeMob() {
   document.getElementById('mobPanel').classList.remove('open');
   document.getElementById('mobOverlay').classList.remove('open');
   document.getElementById('hamBtn').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-// Highlight current page in mobile nav
-(function(){
-  var page=window.location.pathname.split('/').pop()||'index.html';
-  document.querySelectorAll('.mob-links a').forEach(function(a){
-    if(a.getAttribute('href')===page) a.classList.add('mob-active');
-  });
-})();
+
+// ── Init ──────────────────────────────────────────────────────────────────
+buildTabs();
+renderProducts();
 </script>
 </body>
 </html>
